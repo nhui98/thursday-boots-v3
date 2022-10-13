@@ -9,7 +9,7 @@ const gridItemsStyles = [
   `${style1}`,
   `${style1}`,
   `${style2}`,
-  `${style2}`,
+  `${style2} hidden lg:block`,
   `${style2}`,
   `${style2}`,
   `${style2}`,
