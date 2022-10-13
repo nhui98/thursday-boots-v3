@@ -11,6 +11,8 @@ module.exports = {
     extend: {
       colors: {
         offwhite: "#f2f2f2",
+        lightgrey: "#f8f8f8",
+        green: "#243a3e",
       },
     },
   },
