@@ -18,7 +18,7 @@ export default function Feature({
 }
 
 export interface FeatureProps {
-  id: number;
+  id?: number;
   img: string;
   alt: string;
   title: string;
