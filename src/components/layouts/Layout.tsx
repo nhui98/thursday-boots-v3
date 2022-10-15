@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export default function Layout({ isHome = false }: LayoutProps) {
   return (
-    <div className="relative min-w-[300px]">
+    <div className="relative w-screen min-w-[300px] overflow-x-hidden">
       <Navbar isHome={isHome} />
       <Outlet />
     </div>
