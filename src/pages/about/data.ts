@@ -37,7 +37,14 @@ export const BANNER_DATA: BannerItem[] = [
   },
 ];
 
-export const LINKS = [
+export interface ILink {
+  id: number;
+  slug: string;
+  text: string;
+  href: string;
+}
+
+export const BANNER_LINKS: ILink[] = [
   {
     id: 0,
     slug: "our-story",

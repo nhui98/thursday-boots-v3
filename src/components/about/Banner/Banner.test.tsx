@@ -1,14 +1,14 @@
+import { BANNER_DATA, BANNER_LINKS } from "@pages/about/data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
 import Banner from "./Banner";
-import { BANNER_DATA, LINKS } from "./data";
 
 const router = createMemoryRouter([
   {
     path: "/",
-    element: <Banner bannerData={BANNER_DATA[0]} />,
+    element: <Banner bannerData={BANNER_DATA[0]} bannerLinks={BANNER_LINKS} />,
   },
 ]);
 
@@ -25,7 +25,7 @@ describe("Banner", () => {
   it("displays the links correctly", () => {
     render(<RouterProvider router={router} />);
 
-    LINKS.map(({ text }) => {
+    BANNER_LINKS.map(({ text }) => {
       const link = screen.getByRole("link", {
         name: text,
       });

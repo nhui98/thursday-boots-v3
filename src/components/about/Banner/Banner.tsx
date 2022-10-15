@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
 
-import { BannerItem, LINKS } from "./data";
+import { BannerItem, ILink } from "../../../pages/about/data";
 
 interface BannerProps {
   bannerData: BannerItem;
+  bannerLinks: ILink[];
 }
 
 export default function Banner({
   bannerData: { alt, img, img2, title },
+  bannerLinks,
 }: BannerProps) {
   return (
     <section className="relative">
@@ -29,8 +31,8 @@ export default function Banner({
         </figcaption>
       </figure>
 
-      <ul className="absolute bottom-0 z-20 flex h-16 w-full items-center justify-start overflow-x-auto bg-black/30 text-center text-sm tracking-wider text-white sm:justify-center">
-        {LINKS.map(({ href, id, text }) => (
+      <ul className="absolute bottom-0 z-20 flex h-16 w-full items-center justify-start overflow-x-auto bg-black/30 text-center text-sm tracking-wider text-white md:justify-center">
+        {bannerLinks.map(({ href, id, text }) => (
           <li key={id} className="h-full">
             <NavLink
               to={href}
