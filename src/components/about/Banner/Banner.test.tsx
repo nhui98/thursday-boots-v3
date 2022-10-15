@@ -1,4 +1,4 @@
-import { logRoles, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
@@ -14,8 +14,7 @@ const router = createMemoryRouter([
 
 describe("Banner", () => {
   it("displays the correct number of images", () => {
-    const { container } = render(<RouterProvider router={router} />);
-    logRoles(container);
+    render(<RouterProvider router={router} />);
 
     const images = screen.getAllByRole("img", {
       name: `${BANNER_DATA[0].alt}`,
