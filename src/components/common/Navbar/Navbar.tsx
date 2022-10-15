@@ -63,7 +63,7 @@ export default function Navbar({ isHome }: NavbarProps) {
           menuLinks={MENU_LINKS_WOMEN}
         />
 
-        <Link to={`/about`} className="hidden font-semibold lg:block">
+        <Link to={`/about/our-story`} className="hidden font-semibold lg:block">
           ABOUT
         </Link>
       </div>
