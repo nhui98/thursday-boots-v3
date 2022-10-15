@@ -1,6 +1,8 @@
 import { BANNER_DATA } from "@components/about/Banner/data";
 import { AboutLayout, Layout } from "@components/layouts";
-import { OurProduct, OurStory, OurValues } from "@pages/about";
+import OurProduct from "@pages/about/OurProduct/OurProduct";
+import OurStory from "@pages/about/OurStory/OurStory";
+import OurValues from "@pages/about/OurValues/OurValues";
 import Home from "@pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

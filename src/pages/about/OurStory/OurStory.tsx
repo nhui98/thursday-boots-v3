@@ -1,16 +1,16 @@
 import AboutTitle from "@components/about/AboutTitle/AboutTitle";
 import Feature from "@components/about/Feature/Feature";
 
-import { OUR_VALUES_DATA } from "./OurValues.data";
+import { OUR_STORY_DATA } from "./data";
 
-export default function OurValues() {
+export default function OurStory() {
   return (
     <>
       <AboutTitle
-        title={OUR_VALUES_DATA.title}
-        description={OUR_VALUES_DATA.description}
+        title={OUR_STORY_DATA.title}
+        description={OUR_STORY_DATA.description}
       />
-      {OUR_VALUES_DATA.features.map((feature) => (
+      {OUR_STORY_DATA.features.map((feature) => (
         <Feature key={feature.id} {...feature} />
       ))}
     </>
