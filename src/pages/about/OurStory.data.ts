@@ -20,7 +20,7 @@ export const OUR_STORY_DATA = {
     {
       id: 1,
       img: OurStory2,
-      alt: "",
+      alt: "partners",
       title: "World-Class Partners",
       description:
         "We care deeply about how our products are made. That’s why we partner with world-renowned suppliers and highly skilled artisans to carefully handcraft our footwear. Only the highest ethical and quality standards are accepted. Our goal is to make products that we can proudly stand by, and that you can confidently stand in for years to come.",
@@ -28,7 +28,7 @@ export const OUR_STORY_DATA = {
     {
       id: 2,
       img: OurStory3,
-      alt: "",
+      alt: "mens-chelsea-suede",
       title: "A Better Experience",
       description:
         "The only thing we’re more passionate about than our products are the people who wear them. Whether you have a question, comment, or just want to tell us about your most recent #thursdayboots adventure (our favorite), our team is always here for you! After all, buying footwear should be fun, not stressful.",
@@ -36,7 +36,7 @@ export const OUR_STORY_DATA = {
     {
       id: 3,
       img: OurStory4,
-      alt: "",
+      alt: "womens-boot",
       title: "For Wherever The Day Takes You",
       description:
         "'Thursday' is all about being ready for the unexpected. Officially a weekday, Thursday is also the unofficial start of the weekend. So no matter what you do for work, or where you go for fun, you can always stand confidently in your Thursdays. That is the mission behind every product we make. (And yes, you can wear them Friday through Wednesday, too.)",
@@ -44,7 +44,7 @@ export const OUR_STORY_DATA = {
     {
       id: 4,
       img: OurStory5,
-      alt: "",
+      alt: "team",
       title: "8 Years Later",
       description:
         "It all started with a simple idea on a surf trip in Nicaragua to make the best boots possible and sell them at the best price possible. Today, Thursdays are being worn in all 50 states and more than 60 countries. What started as a 'bootstrapped' passion project has evolved into something truly special. It’s been a dream come true — and we’re just getting started.",
