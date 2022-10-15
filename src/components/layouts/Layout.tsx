@@ -1,11 +1,15 @@
 import Navbar from "@components/common/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 
-export default function Layout() {
+export default function Layout({ isHome = false }: LayoutProps) {
   return (
     <div className="relative min-w-[300px]">
-      <Navbar />
+      <Navbar isHome={isHome} />
       <Outlet />
     </div>
   );
+}
+
+export interface LayoutProps {
+  isHome?: boolean;
 }
