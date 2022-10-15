@@ -8,6 +8,14 @@ import {
 import { RiAccountCircleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
+import {
+  MENS_PROMOTION_DATA,
+  MENU_LINKS_MEN,
+  MENU_LINKS_WOMEN,
+  WOMENS_PROMOTION_DATA,
+} from "./data";
+import DropdownMenu from "./DropdownMenu";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const isHome = true;
@@ -32,20 +40,30 @@ export default function Navbar() {
       } ${isHome && scrolled && "lg:bg-white lg:text-black"}`}
     >
       {/* left */}
-      <div className="flex w-1/5 sm:w-1/3 sm:gap-x-6">
+      <div className="flex h-full w-1/5 items-center sm:w-1/3 sm:gap-x-6">
         <AiOutlineMenu className="cursor-pointer text-2xl lg:hidden" />
         <AiOutlineSearch className="hidden cursor-pointer text-2xl sm:block lg:hidden" />
 
-        <Link to={`/`}>
-          <div className="hidden gap-x-2 font-semibold lg:flex lg:items-center">
+        <div className="navbar-dropdown-link hidden h-full font-semibold lg:flex lg:items-center">
+          <Link to={`/`} className="flex items-center gap-x-2">
             MEN <AiOutlineDown />
-          </div>
-        </Link>
-        <Link to={`/`}>
-          <div className="hidden gap-x-2 font-semibold lg:flex lg:items-center">
+          </Link>
+        </div>
+        <DropdownMenu
+          promotionData={MENS_PROMOTION_DATA}
+          menuLinks={MENU_LINKS_MEN}
+        />
+
+        <div className="navbar-dropdown-link hidden h-full font-semibold lg:flex lg:items-center">
+          <Link to={`/`} className="flex items-center gap-x-2">
             WOMEN <AiOutlineDown />
-          </div>
-        </Link>
+          </Link>
+        </div>
+        <DropdownMenu
+          promotionData={WOMENS_PROMOTION_DATA}
+          menuLinks={MENU_LINKS_WOMEN}
+        />
+
         <Link to={`/`} className="hidden font-semibold lg:block">
           ABOUT
         </Link>

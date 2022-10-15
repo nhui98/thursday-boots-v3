@@ -104,7 +104,7 @@ export const MENU_LINKS_WOMEN: MenuData[] = [
   },
   {
     id: 2,
-    category: "sneakers",
+    category: "Sneakers",
     styles: [
       {
         id: 1,
