@@ -16,9 +16,8 @@ import {
 } from "./data";
 import DropdownMenu from "./DropdownMenu";
 
-export default function Navbar() {
+export default function Navbar({ isHome }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
-  const isHome = true;
 
   useEffect(() => {
     function isScrolled() {
@@ -34,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-0 z-10 flex h-[5rem] w-full min-w-[300px] items-center bg-transparent bg-white px-2 text-black sm:px-6 ${
+      className={`fixed inset-0 z-10 flex h-[5rem] w-full min-w-[300px] items-center bg-white px-2 text-black sm:px-6 ${
         isHome &&
         "group lg:bg-transparent lg:text-white lg:transition-colors lg:hover:bg-white lg:hover:text-black"
       } ${isHome && scrolled && "lg:bg-white lg:text-black"}`}
@@ -64,7 +63,7 @@ export default function Navbar() {
           menuLinks={MENU_LINKS_WOMEN}
         />
 
-        <Link to={`/`} className="hidden font-semibold lg:block">
+        <Link to={`/about`} className="hidden font-semibold lg:block">
           ABOUT
         </Link>
       </div>
@@ -77,7 +76,7 @@ export default function Navbar() {
           "group-hover:2xl group-hover:translate-y-0 group-hover:text-2xl lg:translate-y-6 lg:text-3xl xl:text-4xl"
         }`}
       >
-        THURSDAY BOOTS
+        <Link to={"/"}>THURSDAY BOOTS</Link>
       </div>
 
       {/* right */}
@@ -95,4 +94,8 @@ export default function Navbar() {
       </div>
     </nav>
   );
+}
+
+export interface NavbarProps {
+  isHome: boolean;
 }
