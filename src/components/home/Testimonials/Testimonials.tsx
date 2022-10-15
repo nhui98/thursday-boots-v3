@@ -64,7 +64,9 @@ export default function Testimonials() {
           {TESTIMONIALS_DATA.map(({ img, alt, id }) => (
             <div
               key={id}
-              className="opacity-50 transition-opacity duration-500"
+              className={` transition-opacity duration-500 ${
+                active === id ? "opacity-100" : "opacity-50"
+              }`}
             >
               <img src={img} alt={alt} />
             </div>
