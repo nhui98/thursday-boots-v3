@@ -2,6 +2,7 @@ import Layout from "@components/layouts/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RoutesAbout from "./Routes-About";
+import RoutesHelp from "./Routes-Help";
 import RoutesHome from "./Routes-Home";
 
 const router = createBrowserRouter([
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [...RoutesAbout],
+    children: [...RoutesAbout, ...RoutesHelp],
   },
 ]);
 

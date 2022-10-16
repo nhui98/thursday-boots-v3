@@ -20,4 +20,12 @@
   .navbar-dropdown-link:hover + div {
     @apply visible opacity-100 transition-opacity;
   }
+
+  .faq-answer > ul {
+    @apply list-inside list-disc;
+  }
+
+  .faq-answer a {
+    @apply underline;
+  }
 }

@@ -81,7 +81,7 @@ export default function Navbar({ isHome }: NavbarProps) {
 
       {/* right */}
       <div className="flex w-1/5 justify-end gap-x-6 sm:w-1/3">
-        <Link to={`/`} className="hidden font-semibold lg:block">
+        <Link to={`/faq`} className="hidden font-semibold lg:block">
           HELP
         </Link>
         <Link to={`/`} className="hidden font-semibold lg:block">
