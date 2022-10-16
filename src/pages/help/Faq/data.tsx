@@ -29,32 +29,32 @@ export const BANNER_LINKS: ILink[] = [
   {
     id: 0,
     text: "ABOUT",
-    href: "/faq#about",
+    href: "#about",
   },
   {
     id: 1,
     text: "SIZING",
-    href: "/faq#sizing",
+    href: "#sizing",
   },
   {
     id: 2,
     text: "PRODUCT",
-    href: "/faq#product",
+    href: "#product",
   },
   {
     id: 3,
     text: "SHIPPING",
-    href: "/faq#shipping",
+    href: "#shipping",
   },
   {
     id: 4,
     text: "EXCHANGES",
-    href: "/faq#exchanges",
+    href: "#exchanges",
   },
   {
     id: 5,
     text: "SHOE CARE",
-    href: "/faq#shoecare",
+    href: "#shoecare",
   },
 ];
 
