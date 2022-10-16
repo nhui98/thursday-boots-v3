@@ -1,4 +1,4 @@
-import Banner from "@components/about/Banner/Banner";
+import Banner from "@components/common/Banner/Banner";
 import { BannerItem, ILink } from "@pages/about/data";
 import { Outlet } from "react-router-dom";
 
@@ -13,7 +13,7 @@ export default function LayoutAbout({
 }: LayoutAboutProps) {
   return (
     <main className="mt-[5rem] w-full">
-      <Banner bannerData={bannerData} bannerLinks={bannerLinks} />
+      <Banner bannerData={bannerData} bannerLinks={bannerLinks} styledLinks />
       <Outlet />
     </main>
   );

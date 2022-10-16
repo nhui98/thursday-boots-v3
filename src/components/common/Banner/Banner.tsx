@@ -1,15 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { BannerItem, ILink } from "../../../pages/about/data";
 
 interface BannerProps {
   bannerData: BannerItem;
   bannerLinks: ILink[];
+  styledLinks?: boolean;
 }
 
 export default function Banner({
   bannerData: { alt, img, img2, title },
   bannerLinks,
+  styledLinks,
 }: BannerProps) {
   return (
     <section className="relative">
@@ -34,17 +36,26 @@ export default function Banner({
       <ul className="absolute bottom-0 z-20 flex h-16 w-full items-center justify-start overflow-x-auto bg-black/30 text-center text-sm tracking-wider text-white md:justify-center">
         {bannerLinks.map(({ href, id, text }) => (
           <li key={id} className="h-full">
-            <NavLink
-              to={href}
-              end
-              className={({ isActive }) =>
-                `flex h-full items-center px-8 transition-colors hover:bg-white/90 hover:text-black ${
-                  isActive ? "bg-white text-black" : undefined
-                }`
-              }
-            >
-              {text}
-            </NavLink>
+            {styledLinks ? (
+              <NavLink
+                to={href}
+                end
+                className={({ isActive }) =>
+                  `flex h-full items-center px-8 transition-colors hover:bg-white/90 hover:text-black ${
+                    isActive ? "bg-white text-black" : undefined
+                  }`
+                }
+              >
+                {text}
+              </NavLink>
+            ) : (
+              <Link
+                to={href}
+                className={`flex h-full items-center px-8 transition-colors hover:bg-white/90 hover:text-black`}
+              >
+                {text}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
