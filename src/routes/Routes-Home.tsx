@@ -1,4 +1,4 @@
-import { Layout } from "@components/layouts";
+import Layout from "@components/layouts/Layout";
 import Home from "@pages/Home";
 
 export default [

@@ -1,4 +1,4 @@
-import { Layout } from "@components/layouts";
+import Layout from "@components/layouts/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RoutesAbout from "./Routes-About";
