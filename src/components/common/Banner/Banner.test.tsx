@@ -8,7 +8,13 @@ import Banner from "./Banner";
 const router = createMemoryRouter([
   {
     path: "/",
-    element: <Banner bannerData={BANNER_DATA[0]} bannerLinks={BANNER_LINKS} />,
+    element: (
+      <Banner
+        bannerData={BANNER_DATA[0]}
+        bannerLinks={BANNER_LINKS}
+        styledLinks
+      />
+    ),
   },
 ]);
 

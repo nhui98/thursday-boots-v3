@@ -49,12 +49,18 @@ export default function Banner({
                 {text}
               </NavLink>
             ) : (
-              <Link
-                to={href}
+              <button
+                onClick={() => {
+                  const el = document.querySelector(href);
+                  el?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }}
                 className={`flex h-full items-center px-8 transition-colors hover:bg-white/90 hover:text-black`}
               >
                 {text}
-              </Link>
+              </button>
             )}
           </li>
         ))}
