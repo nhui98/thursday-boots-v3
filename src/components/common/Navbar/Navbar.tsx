@@ -24,12 +24,12 @@ export default function Navbar({ isHome }: NavbarProps) {
       window.scrollY > 0 ? setScrolled(true) : setScrolled(false);
     }
 
-    window.addEventListener("scroll", isScrolled);
+    isHome && window.addEventListener("scroll", isScrolled);
 
     return () => {
       window.removeEventListener("scroll", isScrolled);
     };
-  }, []);
+  }, [isHome]);
 
   return (
     <nav
