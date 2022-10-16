@@ -39,7 +39,7 @@ export const BANNER_DATA: BannerItem[] = [
 
 export interface ILink {
   id: number;
-  slug: string;
+  slug?: string;
   text: string;
   href: string;
 }
