@@ -11,70 +11,85 @@ import WomenPromo5 from "./images/women-promo-5.webp";
 
 export const MENU_LINKS_MEN: MenuData[] = [
   {
-    id: 1,
+    id: 0,
     category: "Boots",
     styles: [
       {
+        id: 0,
+        style: "All Styles",
+        href: "/product-listing/mens/boots",
+      },
+      {
         id: 1,
-        style: "President",
-        href: "/",
+        style: "Captain",
+        href: "/product-listing/mens/boots/captain",
       },
       {
         id: 2,
-        style: "Captain",
-        href: "/",
+        style: "President",
+        href: "/product-listing/mens/boots/president",
       },
       {
         id: 3,
         style: "Chelsea",
-        href: "/",
+        href: "/product-listing/mens/boots/chelsea",
       },
       {
         id: 4,
         style: "Chukka",
-        href: "/",
+        href: "/product-listing/mens/boots/chukka",
       },
       {
         id: 5,
         style: "Wingtip",
-        href: "/",
+        href: "/product-listing/mens/boots/wingtip",
+      },
+    ],
+  },
+  {
+    id: 1,
+    category: "Sneakers",
+    styles: [
+      {
+        id: 0,
+        style: "All Styles",
+        href: "/product-listing/mens/sneakers",
+      },
+      {
+        id: 1,
+        style: "Low Top",
+        href: "/product-listing/mens/sneakers/lowtop",
+      },
+      {
+        id: 2,
+        style: "High Top",
+        href: "/product-listing/mens/sneakers/hightop",
       },
     ],
   },
   {
     id: 2,
-    category: "Sneakers",
-    styles: [
-      {
-        id: 1,
-        style: "Low Top",
-        href: "/",
-      },
-      {
-        id: 2,
-        style: "High Top",
-        href: "/",
-      },
-    ],
-  },
-  {
-    id: 3,
     category: "Shoes",
     styles: [
       {
+        id: 0,
+        style: "All Styles",
+        href: "/product-listing/mens/sneakers",
+      },
+      {
         id: 1,
         style: "Dress Shoes",
-        href: "",
+        href: "/product-listing/mens/sneakers/dressshoes",
       },
       {
         id: 2,
         style: "Loafers",
-        href: "/mens/shoes/loafer",
+        href: "/product-listing/mens/sneakers/loafers",
       },
       {
         id: 3,
         style: "Boat Shoes",
-        href: "/mens/shoes/boat",
+        href: "/product-listing/mens/sneakers/boatshoes",
       },
     ],
   },
