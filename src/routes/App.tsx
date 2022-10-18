@@ -4,13 +4,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RoutesAbout from "./Routes-About";
 import RoutesHelp from "./Routes-Help";
 import RoutesHome from "./Routes-Home";
+import RoutesProductListing from "./Routes-ProductListing";
 
 const router = createBrowserRouter([
   ...RoutesHome,
   {
     path: "/",
     element: <Layout />,
-    children: [...RoutesAbout, ...RoutesHelp],
+    children: [...RoutesAbout, ...RoutesHelp, ...RoutesProductListing],
   },
 ]);
 
