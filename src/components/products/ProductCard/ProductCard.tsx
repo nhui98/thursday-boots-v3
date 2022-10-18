@@ -1,8 +1,8 @@
-import { Product } from "@pages/products/ProductsListing/data";
+import { ProductType } from "@pages/products/ProductsListing/data";
 import { Link } from "react-router-dom";
 
 interface ProductCardProps {
-  product: Product;
+  product: ProductType;
 }
 
 export function ProductCard({ product }: ProductCardProps) {

@@ -1,4 +1,6 @@
-export const MOCK_PRODUCT = {
+import { ProductType } from "@pages/products/ProductsListing/data";
+
+export const MOCK_PRODUCT: ProductType = {
   id: 0,
   slug: "mens-boots-captain-matteblack",
   category: "boots",

@@ -1,10 +1,10 @@
 import { ProductCard } from "@components/products/ProductCard/ProductCard";
 import { useLoaderData } from "react-router-dom";
 
-import { Product } from "./data";
+import { ProductType } from "./data";
 
 interface LoaderData {
-  products: Product[];
+  products: ProductType[];
   styles: string[];
 }
 

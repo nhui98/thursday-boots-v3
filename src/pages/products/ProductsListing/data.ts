@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductType {
   id: number;
   slug: string;
   category: string;
@@ -17,7 +17,7 @@ export interface Product {
   BannerDescription: string;
 }
 
-export const MOCK_DB: Product[] = [
+export const MOCK_DB: ProductType[] = [
   {
     id: 0,
     slug: "mens-boots-captain-matteblack",
