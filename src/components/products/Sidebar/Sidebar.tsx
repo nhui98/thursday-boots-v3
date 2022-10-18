@@ -7,6 +7,8 @@ export default function Sidebar({ links }: SidebarProps) {
   const { category } = useParams();
   const [activeDropdown, setActiveDropdown] = useState(category);
 
+  console.log(activeDropdown);
+
   return (
     <aside className="w-72">
       {links.map(({ id, category, styles }) => (
@@ -15,7 +17,9 @@ export default function Sidebar({ links }: SidebarProps) {
             className="flex h-full w-full cursor-pointer items-center justify-between py-1"
             onClick={() =>
               setActiveDropdown((prevCategory) =>
-                prevCategory === category ? undefined : category
+                prevCategory !== category.toLocaleLowerCase()
+                  ? category.toLocaleLowerCase()
+                  : undefined
               )
             }
           >
