@@ -1,6 +1,6 @@
 import { MenuData } from "@components/common/Navbar/data";
 import { useState } from "react";
-import { AiOutlineMinus } from "react-icons/ai";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { NavLink, useParams } from "react-router-dom";
 
 export default function Sidebar({ links }: SidebarProps) {
@@ -15,18 +15,22 @@ export default function Sidebar({ links }: SidebarProps) {
             className="flex h-full w-full cursor-pointer items-center justify-between py-1"
             onClick={() =>
               setActiveDropdown((prevCategory) =>
-                prevCategory !== category.toLocaleLowerCase()
+                prevCategory !== category.toLowerCase()
                   ? category.toLocaleLowerCase()
                   : undefined
               )
             }
           >
             <h2 className="text-sm font-semibold">{category}</h2>
-            <AiOutlineMinus />
+            {activeDropdown === category.toLowerCase() ? (
+              <AiOutlineMinus />
+            ) : (
+              <AiOutlinePlus />
+            )}
           </button>
           <ul
             className={`overflow-hidden transition-all duration-500 ${
-              activeDropdown === category.toLocaleLowerCase()
+              activeDropdown === category.toLowerCase()
                 ? "max-h-screen opacity-100 ease-in"
                 : "max-h-0 opacity-0 ease-out"
             }`}
