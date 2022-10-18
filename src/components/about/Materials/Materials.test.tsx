@@ -1,4 +1,4 @@
-import { logRoles, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { describe, it } from "vitest";
 
 import { MATERIAL_LIST } from "./data";
@@ -6,8 +6,7 @@ import Materials from "./Materials";
 
 describe("Materials", () => {
   it("displays the correct number of materials", () => {
-    const { container } = render(<Materials />);
-    logRoles(container);
+    render(<Materials />);
 
     const materials = screen.getAllByRole("figure");
     expect(materials).toHaveLength(MATERIAL_LIST.materials.length);
