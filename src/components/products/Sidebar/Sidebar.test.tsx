@@ -30,7 +30,8 @@ describe("Sidebar", () => {
 
     const links = screen.getAllByRole("listitem");
     expect(links).toHaveLength(
-      MENU_LINKS_MEN.reduce((acc, { styles }) => acc + styles.length, 0)
+      MENU_LINKS_MEN.reduce((acc, { styles }) => acc + styles.length, 0) +
+        MENU_LINKS_MEN.length
     );
   });
 });

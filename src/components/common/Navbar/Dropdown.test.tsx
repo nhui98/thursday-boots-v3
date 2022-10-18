@@ -30,7 +30,8 @@ describe("DropdownMenu", () => {
 
     const links = screen.getAllByRole("link");
     expect(links).toHaveLength(
-      MENU_LINKS_MEN.reduce((acc, link) => acc + link.styles.length, 0)
+      MENU_LINKS_MEN.reduce((acc, link) => acc + link.styles.length, 0) +
+        MENU_LINKS_MEN.length
     );
   });
 });
