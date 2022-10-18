@@ -13,12 +13,8 @@ export const MENU_LINKS_MEN: MenuData[] = [
   {
     id: 0,
     category: "Boots",
+    href: "/product-listing/mens/boots",
     styles: [
-      {
-        id: 0,
-        style: "All Styles",
-        href: "/product-listing/mens/boots",
-      },
       {
         id: 1,
         style: "Captain",
@@ -49,12 +45,8 @@ export const MENU_LINKS_MEN: MenuData[] = [
   {
     id: 1,
     category: "Sneakers",
+    href: "/product-listing/mens/sneakers",
     styles: [
-      {
-        id: 0,
-        style: "All Styles",
-        href: "/product-listing/mens/sneakers",
-      },
       {
         id: 1,
         style: "Low Top",
@@ -70,12 +62,8 @@ export const MENU_LINKS_MEN: MenuData[] = [
   {
     id: 2,
     category: "Shoes",
+    href: "/product-listing/mens/shoes",
     styles: [
-      {
-        id: 0,
-        style: "All Styles",
-        href: "/product-listing/mens/sneakers",
-      },
       {
         id: 1,
         style: "Dress Shoes",
@@ -99,6 +87,7 @@ export const MENU_LINKS_WOMEN: MenuData[] = [
   {
     id: 1,
     category: "Boots",
+    href: "",
     styles: [
       {
         id: 1,
@@ -120,6 +109,7 @@ export const MENU_LINKS_WOMEN: MenuData[] = [
   {
     id: 2,
     category: "Sneakers",
+    href: "",
     styles: [
       {
         id: 1,
@@ -211,6 +201,7 @@ export interface PromotionItem {
 export interface MenuData {
   id: number;
   category: string;
+  href: string;
   styles: {
     id: number;
     style: string;

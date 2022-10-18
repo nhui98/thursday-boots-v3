@@ -10,9 +10,17 @@ export default function DropdownMenu({
     <div className="invisible absolute top-[5rem] left-0 hidden h-80 w-full bg-white py-8 text-black opacity-0 transition-opacity hover:visible hover:opacity-100 lg:flex">
       {/* Links */}
       <div className="flex w-[30rem] flex-col flex-wrap gap-y-8 gap-x-20 px-20 xll:w-[35rem]">
-        {menuLinks.map(({ category, id, styles }) => (
+        {menuLinks.map(({ category, id, styles, href }) => (
           <ul key={id} className="flex flex-col gap-y-2">
             <li className="font-bold">{category}</li>
+            <li key={id}>
+              <Link
+                to={href}
+                className="font-semibold text-black/50 hover:text-black/30"
+              >
+                All Styles
+              </Link>
+            </li>
             {styles.map(({ id, href, style }) => (
               <li key={id}>
                 <Link

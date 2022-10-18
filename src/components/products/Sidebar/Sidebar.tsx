@@ -7,11 +7,9 @@ export default function Sidebar({ links }: SidebarProps) {
   const { category } = useParams();
   const [activeDropdown, setActiveDropdown] = useState(category);
 
-  console.log(activeDropdown);
-
   return (
     <aside className="w-72">
-      {links.map(({ id, category, styles }) => (
+      {links.map(({ id, category, styles, href }) => (
         <div key={id}>
           <button
             className="flex h-full w-full cursor-pointer items-center justify-between py-1"
@@ -33,6 +31,19 @@ export default function Sidebar({ links }: SidebarProps) {
                 : "max-h-0 opacity-0 ease-out"
             }`}
           >
+            <li key={id}>
+              <NavLink
+                to={href}
+                end
+                className={({ isActive }) =>
+                  `block px-2 py-1 text-sm ${
+                    isActive ? "bg-offwhite" : undefined
+                  }`
+                }
+              >
+                All Styles
+              </NavLink>
+            </li>
             {styles.map(({ id, href, style }) => (
               <li key={id}>
                 <NavLink
