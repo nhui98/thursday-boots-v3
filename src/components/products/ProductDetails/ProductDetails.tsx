@@ -1,4 +1,6 @@
 import { ProductType } from "@pages/products/ProductsListing/data";
+import { addItemToBasket } from "@store/features/basket/basketSlice";
+import { useAppDispatch } from "@store/store";
 import { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -8,7 +10,18 @@ export default function ProductDetails({
   products,
 }: ProductDetailsProps) {
   const [selectedSize, setSelectedSize] = useState<number>();
+  const [sizeSelectedError, setSizeSelectedError] = useState(false);
   const [displayColor, setDisplayColor] = useState(product.color);
+
+  const dispatch = useAppDispatch();
+
+  const addToBasketHandler = () => {
+    selectedSize
+      ? dispatch(
+          addItemToBasket({ ...product, size: selectedSize, quantity: 1 })
+        )
+      : setSizeSelectedError(true);
+  };
 
   return (
     <section className="flex flex-col gap-y-2">
@@ -48,15 +61,25 @@ export default function ProductDetails({
               className={`flex h-16 w-16 items-center justify-center border-[1px] ${
                 stock === 0 ? "bg-[gray]" : "cursor-pointer hover:bg-black/10"
               } ${selectedSize === size ? "border-black/40" : ""}`}
-              onClick={() => setSelectedSize(size)}
+              onClick={() => {
+                setSelectedSize(size);
+                setSizeSelectedError(false);
+              }}
             >
               {size}
             </button>
           </li>
         ))}
       </ul>
+      {sizeSelectedError && (
+        <p className="text-red-600">Please select a size.</p>
+      )}
+
       <div className="mt-8 flex flex-col gap-y-8">
-        <button className="w-full bg-blue py-3 font-semibold text-white">
+        <button
+          className="w-full bg-blue py-3 font-semibold text-white"
+          onClick={addToBasketHandler}
+        >
           ADD TO CART
         </button>
         <div className="text-center">

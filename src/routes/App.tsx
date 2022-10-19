@@ -23,7 +23,6 @@ const router = createBrowserRouter([
         loader: async ({ params: { slug } }: { params: Params<string> }) => {
           if (!slug) throw new Error("Product Not Found");
           const { product, products } = await getProduct(slug);
-          console.log({ product, products });
 
           if (!product) throw new Error("Product Not Found");
           return { product, products };
