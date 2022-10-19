@@ -25,3 +25,10 @@ export async function getProductsByGenderCategoryStyle(
 
   return products;
 }
+
+export async function getProduct(slug: string) {
+  const product = MOCK_DB.find((p) => p.slug === slug);
+  const products = MOCK_DB.filter((p) => product?.style === p.style);
+
+  return { product, products };
+}

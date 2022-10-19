@@ -1,5 +1,5 @@
 import Layout from "@components/layouts/Layout";
-import ProductDetails from "@pages/products/ProductDetails/ProductDetails";
+import Product from "@pages/products/Product/Product";
 import { getProduct } from "@utils/api/fetchProducts";
 import { createBrowserRouter, Params, RouterProvider } from "react-router-dom";
 
@@ -19,13 +19,14 @@ const router = createBrowserRouter([
       ...RoutesProductListing,
       {
         path: "product-details/:slug",
-        element: <ProductDetails />,
+        element: <Product />,
         loader: async ({ params: { slug } }: { params: Params<string> }) => {
           if (!slug) throw new Error("Product Not Found");
-          const product = await getProduct(slug);
+          const { product, products } = await getProduct(slug);
+          console.log({ product, products });
 
           if (!product) throw new Error("Product Not Found");
-          return product;
+          return { product, products };
         },
       },
     ],
