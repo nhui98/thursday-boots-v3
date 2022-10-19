@@ -38,6 +38,7 @@ export const MOCK_PRODUCT: ProductType = {
     "Handcrafted with Integrity",
   ],
   BannerImg: "/assets/images/mens/captain/matteblack-banner.webp",
+  BannerImgSm: "/assets/images/mens/captain/matteblack-banner-sm.webp",
   BannerTitle: "Rugged & Resilient",
   BannerDescription:
     "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",

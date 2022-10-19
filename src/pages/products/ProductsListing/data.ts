@@ -13,6 +13,7 @@ export interface ProductType {
   }[];
   productFeatures: string[];
   BannerImg: string;
+  BannerImgSm: string;
   BannerTitle: string;
   BannerDescription: string;
 }
@@ -38,7 +39,7 @@ export const MOCK_DB: ProductType[] = [
       { size: 6, stock: 100 },
       { size: 7, stock: 100 },
       { size: 8, stock: 100 },
-      { size: 9, stock: 100 },
+      { size: 9, stock: 0 },
       { size: 10, stock: 100 },
       { size: 11, stock: 100 },
       { size: 12, stock: 100 },
@@ -56,6 +57,7 @@ export const MOCK_DB: ProductType[] = [
       "Handcrafted with Integrity",
     ],
     BannerImg: "/assets/images/mens/captain/matteblack-banner.webp",
+    BannerImgSm: "/assets/images/mens/captain/matteblack-banner-sm.webp",
     BannerTitle: "Rugged & Resilient",
     BannerDescription:
       "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",
@@ -98,6 +100,7 @@ export const MOCK_DB: ProductType[] = [
       "Handcrafted with Integrity",
     ],
     BannerImg: "/assets/images/mens/captain/blue-banner.webp",
+    BannerImgSm: "",
     BannerTitle: "Rugged & Resilient",
     BannerDescription:
       "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",
@@ -140,6 +143,7 @@ export const MOCK_DB: ProductType[] = [
       "Handcrafted with Integrity",
     ],
     BannerImg: "/assets/images/mens/captain/canyon-banner.webp",
+    BannerImgSm: "",
     BannerTitle: "Rugged & Resilient",
     BannerDescription:
       "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",
@@ -182,6 +186,7 @@ export const MOCK_DB: ProductType[] = [
       "Handcrafted with Integrity",
     ],
     BannerImg: "/assets/images/mens/captain/grey-banner.webp",
+    BannerImgSm: "",
     BannerTitle: "Rugged & Resilient",
     BannerDescription:
       "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",
@@ -224,6 +229,7 @@ export const MOCK_DB: ProductType[] = [
       "Handcrafted with Integrity",
     ],
     BannerImg: "/assets/images/mens/captain/tobacco-banner.webp",
+    BannerImgSm: "",
     BannerTitle: "Rugged & Resilient",
     BannerDescription:
       "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",
@@ -266,6 +272,7 @@ export const MOCK_DB: ProductType[] = [
       "Handcrafted with Integrity",
     ],
     BannerImg: "/assets/images/mens/president/matteblack-banner.webp",
+    BannerImgSm: "",
     BannerTitle: "The President",
     BannerDescription:
       "Clean and timeless design built for longevity. This release of the boot that started it all has been streamlined for a dressier silhouette that's every bit as versatile as you expect from Thursday Boot Company. Whether at work, on a date, or in stormy weather, step forward in confidence in the President boot.",
