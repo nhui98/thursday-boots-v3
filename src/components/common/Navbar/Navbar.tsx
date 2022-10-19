@@ -1,3 +1,5 @@
+import { setToggleBasket } from "@store/features/flyout/flyoutSlice";
+import { useAppDispatch, useAppSelector } from "@store/store";
 import { useEffect, useState } from "react";
 import {
   AiOutlineDown,
@@ -18,6 +20,10 @@ import DropdownMenu from "./DropdownMenu";
 
 export default function Navbar({ isHome }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
+  const numberOfBasketItems = useAppSelector(
+    (state) => state.basket.numberOfItems
+  );
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     function isScrolled() {
@@ -91,7 +97,15 @@ export default function Navbar({ isHome }: NavbarProps) {
 
         <RiAccountCircleLine className="hidden cursor-pointer text-2xl sm:block lg:hidden" />
         <AiOutlineSearch className="hidden cursor-pointer text-2xl lg:block" />
-        <AiOutlineShopping className="cursor-pointer text-2xl" />
+        <button
+          className="relative"
+          onClick={() => dispatch(setToggleBasket(true))}
+        >
+          <AiOutlineShopping className="cursor-pointer text-2xl" />
+          <div className="absolute -bottom-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full border-[1px] bg-blue p-2 text-sm text-white">
+            {numberOfBasketItems}
+          </div>
+        </button>
       </div>
     </nav>
   );
