@@ -1,4 +1,5 @@
 import Layout from "@components/layouts/Layout";
+import LayoutCheckout from "@components/layouts/LayoutCheckout";
 import Information from "@pages/checkout/Information";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -22,7 +23,13 @@ const router = createBrowserRouter([
   },
   {
     path: "checkout",
-    element: <Information />,
+    element: <LayoutCheckout />,
+    children: [
+      {
+        path: "information",
+        element: <Information />,
+      },
+    ],
   },
 ]);
 

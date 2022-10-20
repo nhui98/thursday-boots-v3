@@ -1,22 +1,70 @@
-import Breadcrumb from "@components/checkout/Breadcrumb/Breadcrumb";
-import CheckoutCart from "@components/checkout/CheckoutCart/CheckoutCart";
-import CheckoutInformationForm from "@components/checkout/CheckoutInformationForm/CheckoutInformationForm";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Information() {
+  const navigate = useNavigate();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    navigate("/checkout/shipping");
+  };
+
   return (
-    <div className="flex min-h-screen">
-      {/* left */}
-      <div className="flex w-full flex-col items-center gap-y-8 py-10 lg:w-[55%] lg:items-end">
-        <Breadcrumb />
-        <div className="w-full bg-lightgrey lg:hidden">
-          <CheckoutCart />
+    <form className="flex flex-col gap-y-8" onSubmit={handleSubmit}>
+      <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col justify-between font-medium sm:flex-row">
+          <span>Contact information</span>
+          <span>
+            Already have an account?
+            <Link to={"/login"} className="ml-2 text-blue">
+              Log in
+            </Link>
+          </span>
         </div>
-        <CheckoutInformationForm />
+        <input type="text" placeholder="text" className="border py-2 px-4" />
       </div>
-      {/* right */}
-      <div className="hidden bg-lightgrey px-8 py-10 lg:block lg:w-[45%]">
-        <CheckoutCart />
+
+      <div className="flex flex-col gap-y-4">
+        <div className="font-medium">Shipping address</div>
+        <input type="text" placeholder="text" className="border py-2 px-4" />
+
+        <div className="flex flex-col gap-x-2 gap-y-4 sm:flex-row">
+          <input
+            type="text"
+            placeholder="text"
+            className="w-full border py-2 px-4 sm:w-1/2"
+          />
+          <input
+            type="text"
+            placeholder="text"
+            className="w-full border py-2 px-4 sm:w-1/2"
+          />
+        </div>
+
+        <input type="text" placeholder="text" className="border py-2 px-4" />
+
+        <div className="flex flex-col gap-x-2 gap-y-4 sm:flex-row">
+          <input
+            type="text"
+            placeholder="text"
+            className="w-full border py-2 px-4 sm:w-1/2"
+          />
+          <input
+            type="text"
+            placeholder="text"
+            className="w-full border py-2 px-4 sm:w-1/2"
+          />
+        </div>
+
+        <input type="text" placeholder="text" className="border py-2 px-4" />
       </div>
-    </div>
+
+      <div className="mt-4 flex justify-end">
+        <button
+          type="submit"
+          className="w-full cursor-pointer bg-green py-3 px-8 text-white sm:w-auto"
+        >
+          CONTINUE TO SHIPPING
+        </button>
+      </div>
+    </form>
   );
 }
