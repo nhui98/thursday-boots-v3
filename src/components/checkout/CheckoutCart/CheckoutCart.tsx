@@ -1,9 +1,7 @@
 import { useAppSelector } from "@store/store";
 
 export default function CheckoutCart() {
-  const { basketItems, numberOfItems, totalPrice } = useAppSelector(
-    (state) => state.basket
-  );
+  const { basketItems, totalPrice } = useAppSelector((state) => state.basket);
 
   return (
     <div className="flex w-[30rem] flex-col gap-y-8">
