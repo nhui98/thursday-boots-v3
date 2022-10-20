@@ -1,4 +1,5 @@
 import Layout from "@components/layouts/Layout";
+import Information from "@pages/checkout/Information";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RoutesAbout from "./Routes-About";
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       ...RoutesProductListing,
       ...RoutesProduct,
     ],
+  },
+  {
+    path: "checkout",
+    element: <Information />,
   },
 ]);
 

@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function CheckoutInformationForm() {
+  const navigate = useNavigate();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    navigate("/checkout/shipping");
+  };
+
   return (
     <div className="w-full max-w-[40rem] px-8 xl:w-[40rem]">
-      <form action="" className="flex flex-col gap-y-8">
+      <form className="flex flex-col gap-y-8" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-y-4">
           <div className="flex flex-col justify-between font-medium sm:flex-row">
             <span>Contact information</span>
