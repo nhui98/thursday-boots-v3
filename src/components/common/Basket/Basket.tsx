@@ -96,7 +96,10 @@ export default function Basket() {
             </div>
             <button
               className="mt-2 flex w-full items-center justify-center gap-x-2 bg-green p-4"
-              onClick={() => navigate("/checkout")}
+              onClick={() => {
+                dispatch(setToggleBasket(false));
+                navigate("/checkout");
+              }}
             >
               <AiFillLock className="text-lg text-white" />
               <div className="font-bold text-white">CHECKOUT</div>
