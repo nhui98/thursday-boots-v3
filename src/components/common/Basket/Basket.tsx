@@ -6,7 +6,7 @@ import { setToggleBasket } from "@store/features/flyout/flyoutSlice";
 import { useAppDispatch, useAppSelector } from "@store/store";
 import { AiFillLock, AiOutlineClose } from "react-icons/ai";
 import { BsCheckCircleFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Basket() {
   const { basketItems, numberOfItems, totalPrice } = useAppSelector(
@@ -14,6 +14,7 @@ export default function Basket() {
   );
   const { toggleBasket } = useAppSelector((state) => state.flyout);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   return (
     <section
@@ -93,7 +94,10 @@ export default function Basket() {
               <span>Subtotal</span>
               <span>${totalPrice}</span>
             </div>
-            <button className="mt-2 flex w-full items-center justify-center gap-x-2 bg-green p-4">
+            <button
+              className="mt-2 flex w-full items-center justify-center gap-x-2 bg-green p-4"
+              onClick={() => navigate("/checkout")}
+            >
               <AiFillLock className="text-lg text-white" />
               <div className="font-bold text-white">CHECKOUT</div>
             </button>
