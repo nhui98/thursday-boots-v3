@@ -1,8 +1,11 @@
+import {
+  decrementItemQuantityFromBasket,
+  removeItemFromBasket,
+} from "@store/features/basket/basketSlice";
 import { setToggleBasket } from "@store/features/flyout/flyoutSlice";
 import { useAppDispatch, useAppSelector } from "@store/store";
 import { AiFillLock, AiOutlineClose } from "react-icons/ai";
 import { BsCheckCircleFill } from "react-icons/bs";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function Basket() {
@@ -57,8 +60,24 @@ export default function Basket() {
                     <div>Quantity: {quantity}</div>
                     <div>${price * quantity}</div>
                     <div className="flex gap-x-2 text-xs text-black/70">
-                      <button className="underline">Remove</button>
-                      <button className="underline">Remove All</button>
+                      <button
+                        className="underline"
+                        onClick={() =>
+                          dispatch(
+                            decrementItemQuantityFromBasket({ slug, size })
+                          )
+                        }
+                      >
+                        Remove
+                      </button>
+                      <button
+                        className="underline"
+                        onClick={() =>
+                          dispatch(removeItemFromBasket({ slug, size }))
+                        }
+                      >
+                        Remove All
+                      </button>
                     </div>
                   </div>
                 </div>
