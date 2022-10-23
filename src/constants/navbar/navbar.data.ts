@@ -90,12 +90,12 @@ export const MENU_LINKS_MEN: MenuData[] = [
       {
         id: 2,
         style: "Loafers",
-        href: "/product-listing/mens/shoes/loafers",
+        href: "/product-listing/mens/shoes/loafer",
       },
       {
         id: 3,
         style: "Boat Shoes",
-        href: "/product-listing/mens/shoes/boatshoes",
+        href: "/product-listing/mens/shoes/boat",
       },
     ],
   },
