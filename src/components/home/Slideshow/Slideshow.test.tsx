@@ -1,8 +1,8 @@
+import { SLIDESHOW_DATA } from "@constants/home/slideshow.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
-import { SLIDESHOW_DATA } from "./data";
 import Slideshow from "./Slideshow";
 
 const router = createMemoryRouter([

@@ -1,7 +1,6 @@
+import { TESTIMONIALS_DATA } from "@constants/home/testimonials.data";
 import { useRef, useState } from "react";
 import { AiFillStar, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-
-import { TESTIMONIALS_DATA } from "./data";
 
 export default function Testimonials() {
   const [active, setActive] = useState(1);

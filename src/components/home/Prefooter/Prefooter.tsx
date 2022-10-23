@@ -1,6 +1,5 @@
+import { PREFOOTER_DATA } from "@constants/home/prefooter.data";
 import { Link } from "react-router-dom";
-
-import { PREFOOTER_DATA } from "./data";
 
 export default function Prefooter() {
   return (

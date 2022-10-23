@@ -1,8 +1,8 @@
+import { FEATURED_DATA } from "@constants/home/featured.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
-import { FEATURED_DATA } from "./data";
 import Featured from "./Featured";
 
 const router = createMemoryRouter([

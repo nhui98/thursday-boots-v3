@@ -1,8 +1,11 @@
+import {
+  MENS_DATA,
+  WOMENS_DATA,
+} from "@constants/home/featuredcollection.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
-import { MENS_DATA, WOMENS_DATA } from "./data";
 import FeaturedCollection from "./FeaturedCollection";
 
 const router = createMemoryRouter([

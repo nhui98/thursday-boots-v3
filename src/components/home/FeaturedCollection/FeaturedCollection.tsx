@@ -1,7 +1,10 @@
+import {
+  CollectionType,
+  MENS_DATA,
+  WOMENS_DATA,
+} from "@constants/home/featuredcollection.data";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-import { CollectionType, MENS_DATA, WOMENS_DATA } from "./data";
 
 export default function FeaturedCollection() {
   const [active, setActive] = useState(true);

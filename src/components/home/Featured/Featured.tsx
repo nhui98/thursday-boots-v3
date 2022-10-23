@@ -1,6 +1,5 @@
+import { FEATURED_DATA } from "@constants/home/featured.data";
 import { Link } from "react-router-dom";
-
-import { FEATURED_DATA } from "./data";
 
 const style1 = `col-span-1 row-span-1 lg:col-span-5 lg:row-span-2 text-xl lg:text-4xl`;
 const style2 = `col-span-1 row-span-1 lg:col-span-2 lg:row-span-1 text-xl`;

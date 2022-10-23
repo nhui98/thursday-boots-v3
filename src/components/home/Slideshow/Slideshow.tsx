@@ -1,8 +1,7 @@
+import { SLIDESHOW_DATA } from "@constants/home/slideshow.data";
 import { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
-import { SLIDESHOW_DATA } from "./data";
 
 export default function Slideshow() {
   const [slide, setSlide] = useState(1);

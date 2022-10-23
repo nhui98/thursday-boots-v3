@@ -1,8 +1,8 @@
+import { TESTIMONIALS_DATA } from "@constants/home/testimonials.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
-import { TESTIMONIALS_DATA } from "./data";
 import Testimonials from "./Testimonials";
 
 const router = createMemoryRouter([
