@@ -8,7 +8,7 @@ export default function Sidebar({ links }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState(category);
 
   return (
-    <aside className="w-72">
+    <aside className="hidden w-72 lg:block">
       {links.map(({ id, category, styles, href }) => (
         <div key={id}>
           <button

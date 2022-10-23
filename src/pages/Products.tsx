@@ -18,7 +18,7 @@ export default function ProductsListing() {
             <h2 className="border-b-[1px] py-4 text-xl font-bold capitalize">
               {style}
             </h2>
-            <div className="grid grid-cols-[repeat(4,1fr)] gap-x-4 gap-y-8">
+            <div className="grid grid-cols-[repeat(1,1fr)] gap-x-4 gap-y-8 sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] xl:grid-cols-[repeat(4,1fr)]">
               {products.map(
                 (product) =>
                   product.style === style && (
