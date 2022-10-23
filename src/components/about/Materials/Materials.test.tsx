@@ -1,7 +1,7 @@
+import { MATERIAL_LIST } from "@constants/about/materials.data";
 import { render, screen } from "@testing-library/react";
 import { describe, it } from "vitest";
 
-import { MATERIAL_LIST } from "./data";
 import Materials from "./Materials";
 
 describe("Materials", () => {

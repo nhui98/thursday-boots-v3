@@ -1,7 +1,6 @@
 import AboutTitle from "@components/about/AboutTitle/AboutTitle";
 import Feature from "@components/about/Feature/Feature";
-
-import { OUR_VALUES_DATA } from "./data";
+import { OUR_VALUES_DATA } from "@constants/about/ourvalues.data";
 
 export default function OurValues() {
   return (

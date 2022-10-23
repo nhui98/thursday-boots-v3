@@ -1,5 +1,5 @@
 import Banner from "@components/common/Banner/Banner";
-import { BannerItem, ILink } from "@pages/about/data";
+import { BannerItem, ILink } from "@constants/about/about.data";
 import { Outlet } from "react-router-dom";
 
 interface LayoutAboutProps {

@@ -1,8 +1,7 @@
 import AboutTitle from "@components/about/AboutTitle/AboutTitle";
 import Feature from "@components/about/Feature/Feature";
 import Materials from "@components/about/Materials/Materials";
-
-import { OUR_PRODUCT_DATA } from "./data";
+import { OUR_PRODUCT_DATA } from "@constants/about/ourproduct.data";
 
 export default function OurProduct() {
   return (

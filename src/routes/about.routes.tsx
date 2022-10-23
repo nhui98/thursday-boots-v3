@@ -1,8 +1,8 @@
 import LayoutAbout from "@components/layouts/LayoutAbout";
-import { BANNER_DATA, BANNER_LINKS } from "@pages/about/data";
-import OurProduct from "@pages/about/OurProduct/OurProduct";
-import OurStory from "@pages/about/OurStory/OurStory";
-import OurValues from "@pages/about/OurValues/OurValues";
+import { BANNER_DATA, BANNER_LINKS } from "@constants/about/about.data";
+import OurProduct from "@pages/about/OurProduct";
+import OurStory from "@pages/about/OurStory";
+import OurValues from "@pages/about/OurValues";
 
 export default [
   {

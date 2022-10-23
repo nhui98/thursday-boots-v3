@@ -1,4 +1,4 @@
-import { OUR_STORY_DATA } from "@pages/about/OurStory/data";
+import { OUR_STORY_DATA } from "@constants/about/ourstory.data";
 import { render, screen } from "@testing-library/react";
 import { describe, it } from "vitest";
 

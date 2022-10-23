@@ -1,6 +1,5 @@
+import { BannerItem, ILink } from "@constants/about/about.data";
 import { NavLink } from "react-router-dom";
-
-import { BannerItem, ILink } from "../../../pages/about/data";
 
 interface BannerProps {
   bannerData: BannerItem;

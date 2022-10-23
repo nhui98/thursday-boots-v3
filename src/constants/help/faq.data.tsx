@@ -1,4 +1,4 @@
-import { BannerItem, ILink } from "@pages/about/data";
+import { BannerItem, ILink } from "@constants/about/about.data";
 import { Link } from "react-router-dom";
 
 import BannerImg from "./images/BannerImg.webp";

@@ -1,4 +1,4 @@
-import { MATERIAL_LIST } from "./data";
+import { MATERIAL_LIST } from "@constants/about/materials.data";
 
 export default function Materials() {
   return (

@@ -1,4 +1,4 @@
-import { BANNER_DATA, BANNER_LINKS } from "@pages/about/data";
+import { BANNER_DATA, BANNER_LINKS } from "@constants/about/about.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
