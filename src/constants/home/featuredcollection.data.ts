@@ -1,11 +1,12 @@
-import Men1 from "./images/mens-1.webp";
-import Men1Alt from "./images/mens-1-alt.webp";
-import Men2 from "./images/mens-2.webp";
-import Men2Alt from "./images/mens-2-alt.webp";
-import Men3 from "./images/mens-3.webp";
-import Men3Alt from "./images/mens-3-alt.webp";
-import Men4 from "./images/mens-4.webp";
-import Men4Alt from "./images/mens-4-alt.webp";
+import Men1 from "/assets/images/mens/captain/matteblack-1.webp";
+import Men1Alt from "/assets/images/mens/captain/matteblack-2.webp";
+import Men2 from "/assets/images/mens/cavalier/sandstone-1.webp";
+import Men2Alt from "/assets/images/mens/cavalier/sandstone-2.webp";
+import Men3 from "/assets/images/mens/scout/ash-1.webp";
+import Men3Alt from "/assets/images/mens/scout/ash-2.webp";
+import Men4 from "/assets/images/mens/wingtip/chocolate-1.webp";
+import Men4Alt from "/assets/images/mens/wingtip/chocolate-2.webp";
+
 import Women1 from "./images/womens-1.webp";
 import Women1Alt from "./images/womens-1-alt.webp";
 import Women2 from "./images/womens-2.webp";
@@ -18,7 +19,7 @@ import Women4Alt from "./images/womens-4-alt.webp";
 export const MENS_DATA: CollectionType[] = [
   {
     id: 1,
-    href: "/",
+    href: "/product-details/mens-boots-captain-matteblack",
     img: Men1,
     altImg: Men1Alt,
     description: "Men Captain Black Matte",
@@ -28,7 +29,7 @@ export const MENS_DATA: CollectionType[] = [
   },
   {
     id: 2,
-    href: "/",
+    href: "/product-details/mens-boots-cavalier-sandstone",
     img: Men2,
     altImg: Men2Alt,
     description: "Men Cavalier Sandstone",
@@ -38,22 +39,22 @@ export const MENS_DATA: CollectionType[] = [
   },
   {
     id: 3,
-    href: "/",
+    href: "/product-details/mens-boots-scout-ash",
     img: Men3,
     altImg: Men3Alt,
-    description: "Men Cadet Walnut",
-    style: "Cadet",
-    color: "Walnut",
-    price: 190,
+    description: "Men Scout Ash",
+    style: "Scout",
+    color: "Ash",
+    price: 149,
   },
   {
     id: 4,
-    href: "/",
+    href: "/product-details/mens-boots-wingtip-chocolate",
     img: Men4,
     altImg: Men4Alt,
-    description: "Men Wingtip Burgandy",
+    description: "Men Wingtip Chocolate",
     style: "Wingtip",
-    color: "Burgandy",
+    color: "Chocolate",
     price: 235,
   },
 ];

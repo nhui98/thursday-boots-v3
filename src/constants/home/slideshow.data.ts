@@ -47,11 +47,11 @@ export const SLIDESHOW_DATA = [
     buttons: [
       {
         text: "Shop Men",
-        href: "/product-listing/mens/boots",
+        href: "/product-listing/mens/sneakers",
       },
       {
         text: "Shop Women",
-        href: "/product-listing/womens/boots",
+        href: "/product-listing/womens/sneakers",
       },
     ],
   },

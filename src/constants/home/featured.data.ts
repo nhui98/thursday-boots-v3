@@ -29,7 +29,7 @@ export const FEATURED_DATA = [
     id: 3,
     img: Featured4,
     title: "Men's Loafers",
-    href: "/product-listing/mens/shoes/loafers",
+    href: "/product-listing/mens/shoes/loafer",
   },
   {
     id: 4,
