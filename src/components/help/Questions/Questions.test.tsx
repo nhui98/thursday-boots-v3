@@ -1,4 +1,4 @@
-import { FAQ_DATA } from "@pages/help/Faq/data";
+import { FAQ_DATA } from "@constants/help/faq.data";
 import { logRoles, render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";

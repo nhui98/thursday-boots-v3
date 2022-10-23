@@ -4,10 +4,10 @@ import Information from "@pages/checkout/Information";
 import Shipping from "@pages/checkout/Shipping";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import HelpRoutes from "./help.routes";
 import HomeRoutes from "./home.routes";
 import ProductListingRoutes from "./productlisting.routes";
 import RoutesAbout from "./Routes-About";
-import RoutesHelp from "./Routes-Help";
 import RoutesProduct from "./Routes-Product";
 
 const router = createBrowserRouter([
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       ...RoutesAbout,
-      ...RoutesHelp,
+      ...HelpRoutes,
       ...ProductListingRoutes,
       ...RoutesProduct,
     ],

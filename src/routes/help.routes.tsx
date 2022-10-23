@@ -1,4 +1,4 @@
-import Faq from "@pages/help/Faq/Faq";
+import Faq from "@pages/help/Faq";
 
 export default [
   {

@@ -1,7 +1,6 @@
 import Banner from "@components/common/Banner/Banner";
 import Questions from "@components/help/Questions/Questions";
-
-import { BANNER_DATA, BANNER_LINKS, FAQ_DATA } from "./data";
+import { BANNER_DATA, BANNER_LINKS, FAQ_DATA } from "@constants/help/faq.data";
 
 export default function Faq() {
   return (
