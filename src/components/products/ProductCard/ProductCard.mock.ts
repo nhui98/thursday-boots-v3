@@ -1,7 +1,7 @@
-import { ProductType } from "@pages/products/ProductsListing/data";
+import { IProduct } from "@utils/api/fetchProducts";
 
-export const MOCK_PRODUCT: ProductType = {
-  id: 0,
+export const MOCK_PRODUCT: IProduct = {
+  _id: "0",
   slug: "mens-boots-captain-matteblack",
   category: "boots",
   gender: "mens",
@@ -37,9 +37,11 @@ export const MOCK_PRODUCT: ProductType = {
     "Durable Studded Rubber Outsoles",
     "Handcrafted with Integrity",
   ],
-  BannerImg: "/assets/images/mens/captain/matteblack-banner.webp",
-  BannerImgSm: "/assets/images/mens/captain/matteblack-banner-sm.webp",
-  BannerTitle: "Rugged & Resilient",
-  BannerDescription:
+  bannerImg: "/assets/images/mens/captain/matteblack-banner.webp",
+  bannerImgSm: "/assets/images/mens/captain/matteblack-banner-sm.webp",
+  bannerTitle: "Rugged & Resilient",
+  bannerDescription:
     "Built for the men who wear their boots hard. The Rugged & Resilient matte leather upper, sourced exclusively from Tier 1 USA cattle hides, was custom created to look great with years of hard wear and minimal care. From the Kevlar® blend laces to the durable steel shank, every material was carefully created so that you can go the extra mile with confidence.",
+  createdAt: new Date(),
+  updatedAt: new Date(),
 };

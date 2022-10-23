@@ -2,14 +2,13 @@ import ProductBanner from "@components/products/ProductBanner/ProductBanner";
 import ProductDetails from "@components/products/ProductDetails/ProductDetails";
 import ProductFeatures from "@components/products/ProductFeatures/ProductFeatures";
 import ProductImages from "@components/products/ProductImages/ProductImages";
+import { IProduct } from "@utils/api/fetchProducts";
 import { useLoaderData } from "react-router-dom";
-
-import { ProductType } from "../ProductsListing/data";
 
 export default function Product() {
   const { product, products } = useLoaderData() as {
-    product: ProductType;
-    products: ProductType[];
+    product: IProduct;
+    products: IProduct[];
   };
 
   return (
@@ -22,12 +21,11 @@ export default function Product() {
         <ProductFeatures features={product.productFeatures} />
       </div>
       <ProductBanner
-        img={product.BannerImg}
-        imgSmall={product.BannerImgSm}
-        description={product.BannerDescription}
-        title={product.BannerTitle}
+        img={product.bannerImg}
+        imgSmall={product.bannerImgSm}
+        description={product.bannerDescription}
+        title={product.bannerTitle}
       />
-      {/* //TODO: reviews */}
     </main>
   );
 }

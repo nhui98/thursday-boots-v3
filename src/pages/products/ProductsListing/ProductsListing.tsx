@@ -1,10 +1,9 @@
 import { ProductCard } from "@components/products/ProductCard/ProductCard";
+import { IProduct } from "@utils/api/fetchProducts";
 import { useLoaderData } from "react-router-dom";
 
-import { ProductType } from "./data";
-
 interface LoaderData {
-  products: ProductType[];
+  products: IProduct[];
   styles: string[];
 }
 
@@ -23,7 +22,7 @@ export default function ProductsListing() {
               {products.map(
                 (product) =>
                   product.style === style && (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product._id} product={product} />
                   )
               )}
             </div>

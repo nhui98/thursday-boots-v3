@@ -1,7 +1,7 @@
-import { ProductType } from "@pages/products/ProductsListing/data";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IProduct } from "@utils/api/fetchProducts";
 
-export interface BasketProduct extends ProductType {
+export interface BasketProduct extends IProduct {
   size: number;
   quantity: number;
 }

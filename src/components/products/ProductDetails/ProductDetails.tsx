@@ -1,6 +1,6 @@
-import { ProductType } from "@pages/products/ProductsListing/data";
 import { addItemToBasket } from "@store/features/basket/basketSlice";
 import { useAppDispatch } from "@store/store";
+import { IProduct } from "@utils/api/fetchProducts";
 import { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -92,6 +92,6 @@ export default function ProductDetails({
 }
 
 interface ProductDetailsProps {
-  product: ProductType;
-  products: ProductType[];
+  product: IProduct;
+  products: IProduct[];
 }

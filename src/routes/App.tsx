@@ -7,8 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutRoutes from "./about.routes";
 import HelpRoutes from "./help.routes";
 import HomeRoutes from "./home.routes";
+import ProductDetailsRoutes from "./productdetails.routes";
 import ProductListingRoutes from "./productlisting.routes";
-import RoutesProduct from "./Routes-Product";
 
 const router = createBrowserRouter([
   ...HomeRoutes,
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       ...AboutRoutes,
       ...HelpRoutes,
       ...ProductListingRoutes,
-      ...RoutesProduct,
+      ...ProductDetailsRoutes,
     ],
   },
   {
