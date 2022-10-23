@@ -39,10 +39,10 @@ export default function Navbar({ isHome }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed inset-0 z-30 flex h-[5rem] w-full items-center bg-white px-2 text-black sm:px-6 ${
+      className={`group fixed inset-0 z-30 flex h-[5rem] w-full items-center bg-white px-2 text-black sm:px-6 ${
         isHome
-          ? "group lg:bg-transparent lg:text-white lg:transition-colors lg:hover:bg-white lg:hover:text-black"
-          : "border-b-[1px]"
+          ? "lg:bg-transparent lg:text-white lg:transition-colors lg:hover:bg-white lg:hover:text-black"
+          : ""
       } ${isHome ? scrolled && "lg:bg-white lg:text-black" : ""}`}
     >
       {/* left */}

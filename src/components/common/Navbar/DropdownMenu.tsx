@@ -6,7 +6,7 @@ export default function DropdownMenu({
   menuLinks,
 }: DropdownMenuProps) {
   return (
-    <div className="invisible absolute top-[5rem] left-0 hidden h-80 w-full bg-white py-8 text-black opacity-0 transition-opacity hover:visible hover:opacity-100 lg:flex">
+    <div className="invisible absolute top-[5rem] left-0 hidden h-80 w-full border-t bg-white py-8 text-black opacity-0 transition-opacity hover:visible hover:opacity-100 lg:flex">
       {/* Links */}
       <div className="flex w-[30rem] flex-col flex-wrap gap-y-8 gap-x-20 px-20 xll:w-[35rem]">
         {menuLinks.map(({ category, id, styles, href }) => (
