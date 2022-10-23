@@ -1,5 +1,5 @@
-import { MenuData } from "@components/common/Navbar/data";
 import Sidebar from "@components/products/Sidebar/Sidebar";
+import { MenuData } from "@constants/navbar/navbar.data";
 import { Outlet } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 

@@ -1,3 +1,9 @@
+import {
+  MENS_PROMOTION_DATA,
+  MENU_LINKS_MEN,
+  MENU_LINKS_WOMEN,
+  WOMENS_PROMOTION_DATA,
+} from "@constants/navbar/navbar.data";
 import { setToggleBasket } from "@store/features/flyout/flyoutSlice";
 import { useAppDispatch, useAppSelector } from "@store/store";
 import { useEffect, useState } from "react";
@@ -10,12 +16,6 @@ import {
 import { RiAccountCircleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-import {
-  MENS_PROMOTION_DATA,
-  MENU_LINKS_MEN,
-  MENU_LINKS_WOMEN,
-  WOMENS_PROMOTION_DATA,
-} from "./data";
 import DropdownMenu from "./DropdownMenu";
 
 export default function Navbar({ isHome }: NavbarProps) {

@@ -1,8 +1,8 @@
+import LayoutProductsListing from "@components/layouts/LayoutProductListing";
 import {
   MENU_LINKS_MEN,
   MENU_LINKS_WOMEN,
-} from "@components/common/Navbar/data";
-import LayoutProductsListing from "@components/layouts/LayoutProductListing";
+} from "@constants/navbar/navbar.data";
 import NotFound from "@pages/NotFound";
 import ProductsListing from "@pages/products/ProductsListing/ProductsListing";
 import {

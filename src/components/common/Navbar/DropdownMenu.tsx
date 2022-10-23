@@ -1,6 +1,5 @@
+import { MenuData, PromotionItem } from "@constants/navbar/navbar.data";
 import { Link } from "react-router-dom";
-
-import { MenuData, PromotionItem } from "./data";
 
 export default function DropdownMenu({
   promotionData,

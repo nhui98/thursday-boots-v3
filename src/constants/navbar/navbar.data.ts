@@ -9,6 +9,24 @@ import WomenPromo3 from "./images/women-promo-3.webp";
 import WomenPromo4 from "./images/women-promo-4.webp";
 import WomenPromo5 from "./images/women-promo-5.webp";
 
+export interface PromotionItem {
+  id: number;
+  img: string;
+  title: string;
+  description: string;
+}
+
+export interface MenuData {
+  id: number;
+  category: string;
+  href: string;
+  styles: {
+    id: number;
+    style: string;
+    href: string;
+  }[];
+}
+
 export const MENU_LINKS_MEN: MenuData[] = [
   {
     id: 0,
@@ -28,12 +46,12 @@ export const MENU_LINKS_MEN: MenuData[] = [
       {
         id: 3,
         style: "Chelsea",
-        href: "/product-listing/mens/boots/chelsea",
+        href: "/product-listing/mens/boots/cavalier",
       },
       {
         id: 4,
         style: "Chukka",
-        href: "/product-listing/mens/boots/chukka",
+        href: "/product-listing/mens/boots/scout",
       },
       {
         id: 5,
@@ -67,17 +85,17 @@ export const MENU_LINKS_MEN: MenuData[] = [
       {
         id: 1,
         style: "Dress Shoes",
-        href: "/product-listing/mens/sneakers/dressshoes",
+        href: "/product-listing/mens/shoes/executive",
       },
       {
         id: 2,
         style: "Loafers",
-        href: "/product-listing/mens/sneakers/loafers",
+        href: "/product-listing/mens/shoes/loafers",
       },
       {
         id: 3,
         style: "Boat Shoes",
-        href: "/product-listing/mens/sneakers/boatshoes",
+        href: "/product-listing/mens/shoes/boatshoes",
       },
     ],
   },
@@ -190,21 +208,3 @@ export const WOMENS_PROMOTION_DATA: PromotionItem[] = [
     description: "Premium shoe care for your favourite pair of boots.",
   },
 ];
-
-export interface PromotionItem {
-  id: number;
-  img: string;
-  title: string;
-  description: string;
-}
-
-export interface MenuData {
-  id: number;
-  category: string;
-  href: string;
-  styles: {
-    id: number;
-    style: string;
-    href: string;
-  }[];
-}

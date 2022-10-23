@@ -4,11 +4,11 @@ import Information from "@pages/checkout/Information";
 import Shipping from "@pages/checkout/Shipping";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import ProductListingRoutes from "./productlisting.routes";
 import RoutesAbout from "./Routes-About";
 import RoutesHelp from "./Routes-Help";
 import RoutesHome from "./Routes-Home";
 import RoutesProduct from "./Routes-Product";
-import RoutesProductListing from "./Routes-ProductListing";
 
 const router = createBrowserRouter([
   ...RoutesHome,
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       ...RoutesAbout,
       ...RoutesHelp,
-      ...RoutesProductListing,
+      ...ProductListingRoutes,
       ...RoutesProduct,
     ],
   },

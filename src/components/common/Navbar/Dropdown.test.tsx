@@ -1,8 +1,11 @@
+import {
+  MENS_PROMOTION_DATA,
+  MENU_LINKS_MEN,
+} from "@constants/navbar/navbar.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";
 
-import { MENS_PROMOTION_DATA, MENU_LINKS_MEN } from "./data";
 import DropdownMenu from "./DropdownMenu";
 
 const router = createMemoryRouter([

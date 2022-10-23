@@ -1,4 +1,4 @@
-import { MENU_LINKS_MEN } from "@components/common/Navbar/data";
+import { MENU_LINKS_MEN } from "@constants/navbar/navbar.data";
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, it } from "vitest";

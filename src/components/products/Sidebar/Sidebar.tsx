@@ -1,4 +1,4 @@
-import { MenuData } from "@components/common/Navbar/data";
+import { MenuData } from "@constants/navbar/navbar.data";
 import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { NavLink, useParams } from "react-router-dom";
