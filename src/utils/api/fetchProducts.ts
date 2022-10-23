@@ -1,34 +1,40 @@
-import { MOCK_DB } from "@pages/products/ProductsListing/data";
+const BASE_URL = "http://localhost:8080/api";
 
-export async function getProductsByGenderCategory(
-  gender: string,
-  category: string
-) {
-  const products = MOCK_DB.filter(
-    (product) => product.gender === gender && product.category === category
-  );
-
-  return products;
+export interface IProduct {
+  _id: string;
+  slug: string;
+  category: string;
+  gender: string;
+  style: string;
+  color: string;
+  price: number;
+  images: string[];
+  sizes: {
+    size: number;
+    stock: number;
+  }[];
+  productFeatures: string[];
+  bannerImg: string;
+  bannerImgSm: string;
+  bannerTitle: string;
+  bannerDescription: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-export async function getProductsByGenderCategoryStyle(
+export async function fetchProduct(slug: string) {
+  return await fetch(`${BASE_URL}/product/getproduct/${slug}`);
+}
+
+export async function fetchProducts(
   gender: string,
   category: string,
-  style: string
+  style?: string
 ) {
-  const products = MOCK_DB.filter(
-    (product) =>
-      product.gender === gender &&
-      product.category === category &&
-      product.style === style
-  );
+  let paramString = `/${gender}`;
 
-  return products;
-}
+  if (category) paramString += `/${category}`;
+  if (style) paramString += `/${style}`;
 
-export async function getProduct(slug: string) {
-  const product = MOCK_DB.find((p) => p.slug === slug);
-  const products = MOCK_DB.filter((p) => product?.style === p.style);
-
-  return { product, products };
+  return await fetch(`${BASE_URL}/product/getproducts${paramString}`);
 }

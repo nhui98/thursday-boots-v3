@@ -5,10 +5,8 @@ import {
 } from "@constants/navbar/navbar.data";
 import NotFound from "@pages/NotFound";
 import ProductsListing from "@pages/products/ProductsListing/ProductsListing";
-import {
-  getProductsByGenderCategory,
-  getProductsByGenderCategoryStyle,
-} from "@utils/api/fetchProducts";
+import { fetchProducts, IProduct } from "@utils/api/fetchProducts";
+import { queryClient } from "@utils/query-client";
 import { Params } from "react-router-dom";
 
 export default [
@@ -36,7 +34,13 @@ export default [
           params: Params<string>;
         }) => {
           if (!gender || !category) throw new Error("No Products Found.");
-          const products = await getProductsByGenderCategory(gender, category);
+
+          const products: IProduct[] = await queryClient
+            .fetchQuery(["get-products", gender, category], () =>
+              fetchProducts(gender, category)
+            )
+            .then((data) => data.json());
+
           if (!products.length) throw new Error("No Products Found.");
 
           const styles = Array.from(
@@ -56,11 +60,13 @@ export default [
         }) => {
           if (!gender || !category || !style)
             throw new Error("No Products Found.");
-          const products = await getProductsByGenderCategoryStyle(
-            gender,
-            category,
-            style
-          );
+
+          const products: IProduct[] = await queryClient
+            .fetchQuery(["get-products", gender, category, style], () =>
+              fetchProducts(gender, category, style)
+            )
+            .then((data) => data.json());
+
           if (!products.length) throw new Error("No Products Found.");
 
           const styles = Array.from(
