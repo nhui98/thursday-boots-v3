@@ -5,11 +5,11 @@ export const PREFOOTER_DATA = {
   buttons: [
     {
       text: "SHOP MEN",
-      href: "/",
+      href: "/product-listing/mens/boots",
     },
     {
       text: "SHOP WOMEN",
-      href: "/",
+      href: "/product-listing/womens/boots",
     },
   ],
 };

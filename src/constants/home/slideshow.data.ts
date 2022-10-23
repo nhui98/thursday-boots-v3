@@ -15,11 +15,11 @@ export const SLIDESHOW_DATA = [
     buttons: [
       {
         text: "Shop Men",
-        href: "/",
+        href: "/product-listing/mens/boots",
       },
       {
         text: "Shop Women",
-        href: "/",
+        href: "/product-listing/womens/boots",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const SLIDESHOW_DATA = [
     buttons: [
       {
         text: "Shop Women's Boots",
-        href: "/",
+        href: "/product-listing/womens/boots",
       },
     ],
   },
@@ -47,11 +47,11 @@ export const SLIDESHOW_DATA = [
     buttons: [
       {
         text: "Shop Men",
-        href: "/",
+        href: "/product-listing/mens/boots",
       },
       {
         text: "Shop Women",
-        href: "/",
+        href: "/product-listing/womens/boots",
       },
     ],
   },
