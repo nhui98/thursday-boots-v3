@@ -4,7 +4,7 @@ import {
   MENU_LINKS_WOMEN,
 } from "@constants/navbar/navbar.data";
 import NotFound from "@pages/NotFound";
-import ProductsListing from "@pages/products/ProductsListing/ProductsListing";
+import Products from "@pages/Products";
 import { fetchProducts, IProduct } from "@utils/api/fetchProducts";
 import { queryClient } from "@utils/query-client";
 import { Params } from "react-router-dom";
@@ -27,7 +27,7 @@ export default [
     children: [
       {
         path: ":category",
-        element: <ProductsListing />,
+        element: <Products />,
         loader: async ({
           params: { gender, category },
         }: {
@@ -52,7 +52,7 @@ export default [
       },
       {
         path: ":category/:style",
-        element: <ProductsListing />,
+        element: <Products />,
         loader: async ({
           params: { gender, category, style },
         }: {
@@ -72,6 +72,7 @@ export default [
           const styles = Array.from(
             new Set(products.map((product) => product.style))
           );
+
           return { products, styles };
         },
       },

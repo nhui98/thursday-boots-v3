@@ -1,4 +1,4 @@
-import Product from "@pages/products/Product/Product";
+import Product from "@pages/Product";
 import {
   fetchProduct,
   fetchProducts,
@@ -26,6 +26,7 @@ export default [
         .then((data) => data.json());
 
       if (!product) throw new Error("Product Not Found");
+
       return { product, products };
     },
   },
