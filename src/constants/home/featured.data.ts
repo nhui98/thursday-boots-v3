@@ -47,6 +47,6 @@ export const FEATURED_DATA = [
     id: 6,
     img: Featured7,
     title: "Women's Heels",
-    href: "/product-listing/womens/boots",
+    href: "/product-listing/womens/boots/knockout",
   },
 ];

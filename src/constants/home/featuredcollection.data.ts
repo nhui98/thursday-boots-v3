@@ -6,15 +6,12 @@ import Men3 from "/assets/images/mens/scout/ash-1.webp";
 import Men3Alt from "/assets/images/mens/scout/ash-2.webp";
 import Men4 from "/assets/images/mens/wingtip/chocolate-1.webp";
 import Men4Alt from "/assets/images/mens/wingtip/chocolate-2.webp";
-
-import Women1 from "./images/womens-1.webp";
-import Women1Alt from "./images/womens-1-alt.webp";
-import Women2 from "./images/womens-2.webp";
-import Women2Alt from "./images/womens-2-alt.webp";
-import Women3 from "./images/womens-3.webp";
-import Women3Alt from "./images/womens-3-alt.webp";
-import Women4 from "./images/womens-4.webp";
-import Women4Alt from "./images/womens-4-alt.webp";
+import Women3 from "/assets/images/womens/captain/matteblack-1.webp";
+import Women3Alt from "/assets/images/womens/captain/matteblack-2.webp";
+import Women2 from "/assets/images/womens/knockout/matteblack-1.webp";
+import Women2Alt from "/assets/images/womens/knockout/matteblack-2.webp";
+import Women1 from "/assets/images/womens/legend/matteblack-1.webp";
+import Women1Alt from "/assets/images/womens/legend/matteblack-2.webp";
 
 export const MENS_DATA: CollectionType[] = [
   {
@@ -62,7 +59,7 @@ export const MENS_DATA: CollectionType[] = [
 export const WOMENS_DATA: CollectionType[] = [
   {
     id: 1,
-    href: "/",
+    href: "/product-details/womens-boots-legend-matteblack",
     img: Women1,
     altImg: Women1Alt,
     description: "Women Legend Black Matte",
@@ -72,7 +69,7 @@ export const WOMENS_DATA: CollectionType[] = [
   },
   {
     id: 2,
-    href: "/",
+    href: "/product-details/womens-boots-knockout-matteblack",
     img: Women2,
     altImg: Women2Alt,
     description: "Women Knockout Black Matte",
@@ -82,23 +79,13 @@ export const WOMENS_DATA: CollectionType[] = [
   },
   {
     id: 3,
-    href: "/",
+    href: "/product-details/womens-boots-captain-matteblack",
     img: Women3,
     altImg: Women3Alt,
     description: "Women Captain Black Matte",
     style: "Captain",
     color: "Black Matte",
     price: 190,
-  },
-  {
-    id: 4,
-    href: "/",
-    img: Women4,
-    altImg: Women4Alt,
-    description: "Women Combat Black",
-    style: "Combat",
-    color: "Black",
-    price: 180,
   },
 ];
 

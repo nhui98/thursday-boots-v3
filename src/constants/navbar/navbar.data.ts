@@ -105,39 +105,34 @@ export const MENU_LINKS_WOMEN: MenuData[] = [
   {
     id: 1,
     category: "Boots",
-    href: "",
+    href: "/product-listing/womens/boots",
     styles: [
       {
         id: 1,
         style: "Chelsea",
-        href: "/",
+        href: "/product-listing/womens/boots/legend",
       },
       {
         id: 2,
         style: "High Heels",
-        href: "/",
+        href: "/product-listing/womens/boots/knockout",
       },
       {
         id: 3,
         style: "Captain",
-        href: "/",
+        href: "/product-listing/womens/boots/captain",
       },
     ],
   },
   {
     id: 2,
     category: "Sneakers",
-    href: "",
+    href: "/product-listing/womens/sneakers",
     styles: [
       {
         id: 1,
         style: "Classic Low Top",
-        href: "/",
-      },
-      {
-        id: 2,
-        style: "Classic High Top",
-        href: "/",
+        href: "/product-listing/womens/sneakers/lowtop",
       },
     ],
   },
