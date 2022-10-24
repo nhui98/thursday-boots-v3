@@ -91,7 +91,7 @@ export default function Navbar({ isHome }: NavbarProps) {
         <Link to={`/faq`} className="hidden font-semibold lg:block">
           HELP
         </Link>
-        <Link to={`/`} className="hidden font-semibold lg:block">
+        <Link to={`/account/login`} className="hidden font-semibold lg:block">
           ACCOUNT
         </Link>
 

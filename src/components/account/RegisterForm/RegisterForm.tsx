@@ -42,7 +42,7 @@ export default function RegisterForm() {
         console.log(values);
       }}
     >
-      <Form className="flex w-full flex-col gap-y-8">
+      <Form className="flex w-full flex-col gap-y-4">
         <FormInput name="name" label="Name" type="text" />
         <FormInput
           name="email"

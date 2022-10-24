@@ -24,7 +24,7 @@ export default function LoginForm() {
         console.log(values);
       }}
     >
-      <Form className="flex w-full flex-col gap-y-8">
+      <Form className="flex w-full flex-col gap-y-6">
         <FormInput
           name="email"
           label="Email"
