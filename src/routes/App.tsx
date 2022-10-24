@@ -5,6 +5,7 @@ import Shipping from "@pages/checkout/Shipping";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import AboutRoutes from "./about.routes";
+import AccountRoutes from "./account.routes";
 import HelpRoutes from "./help.routes";
 import HomeRoutes from "./home.routes";
 import ProductDetailsRoutes from "./productdetails.routes";
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       ...HelpRoutes,
       ...ProductListingRoutes,
       ...ProductDetailsRoutes,
+      ...AccountRoutes,
     ],
   },
   {
