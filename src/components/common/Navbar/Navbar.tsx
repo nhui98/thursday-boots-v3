@@ -5,6 +5,7 @@ import {
   WOMENS_PROMOTION_DATA,
 } from "@constants/navbar/navbar.data";
 import { setToggleBasket } from "@store/features/flyout/flyoutSlice";
+import { removeAccessToken } from "@store/features/user/userSlice";
 import { useAppDispatch, useAppSelector } from "@store/store";
 import { useEffect, useState } from "react";
 import {
@@ -24,6 +25,7 @@ export default function Navbar({ isHome }: NavbarProps) {
     (state) => state.basket.numberOfItems
   );
   const dispatch = useAppDispatch();
+  const { accessToken } = useAppSelector((state) => state.user);
 
   useEffect(() => {
     function isScrolled() {
@@ -91,9 +93,18 @@ export default function Navbar({ isHome }: NavbarProps) {
         <Link to={`/faq`} className="hidden font-semibold lg:block">
           HELP
         </Link>
-        <Link to={`/account/login`} className="hidden font-semibold lg:block">
-          ACCOUNT
-        </Link>
+        {!accessToken ? (
+          <Link to={`/account/login`} className="hidden font-semibold lg:block">
+            ACCOUNT
+          </Link>
+        ) : (
+          <button
+            className="hidden cursor-pointer font-semibold lg:block"
+            onClick={() => dispatch(removeAccessToken())}
+          >
+            SIGNOUT
+          </button>
+        )}
 
         <RiAccountCircleLine className="hidden cursor-pointer text-2xl sm:block lg:hidden" />
         <AiOutlineSearch className="hidden cursor-pointer text-2xl lg:block" />

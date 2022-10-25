@@ -1,6 +1,11 @@
 import FormInput from "@components/common/FormInput/FormInput";
+import { setAccessToken } from "@store/features/user/userSlice";
+import { useAppDispatch, useAppSelector } from "@store/store";
+import { login } from "@utils/api/authentication";
+import { queryClient } from "@utils/query-client";
 import { Form, Formik } from "formik";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import * as y from "yup";
 
 interface LoginFormValues {
@@ -10,21 +15,45 @@ interface LoginFormValues {
 
 export default function LoginForm() {
   const initialValues: LoginFormValues = { email: "", password: "" };
+  const [loginError, setLoginError] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const { accessToken } = useAppSelector((state) => state.user);
 
   const validationSchema = y.object().shape({
     email: y.string().email("Invalid email").required("Required"),
     password: y.string().required("Required"),
   });
 
+  useEffect(() => {
+    if (accessToken) navigate("/");
+  }, [accessToken, navigate]);
+
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={(values) => {
-        console.log(values);
+      onSubmit={async ({ email, password }) => {
+        const response = await queryClient
+          .fetchQuery(["login"], () => login(email, password))
+          .then((data) => {
+            if (!data.ok) return setLoginError(true);
+            setLoginError(false);
+            return data.json();
+          });
+
+        if (!response) return;
+
+        dispatch(setAccessToken(response.accessToken));
       }}
     >
       <Form className="flex w-full flex-col gap-y-6">
+        {loginError && (
+          <div className="border border-red-600 px-2 py-3 text-center text-red-600">
+            Incorrect Email or Password
+          </div>
+        )}
+
         <FormInput
           name="email"
           label="Email"
