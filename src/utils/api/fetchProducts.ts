@@ -1,5 +1,3 @@
-import { BASE_URL } from "./baseUrl";
-
 export interface IProduct {
   _id: string;
   slug: string;
@@ -23,7 +21,7 @@ export interface IProduct {
 }
 
 export async function fetchProduct(slug: string) {
-  return await fetch(`${BASE_URL}/product/getproduct/${slug}`);
+  return await fetch(`${import.meta.env.BASE_URL}/product/getproduct/${slug}`);
 }
 
 export async function fetchProducts(
@@ -36,5 +34,7 @@ export async function fetchProducts(
   if (category) paramString += `/${category}`;
   if (style) paramString += `/${style}`;
 
-  return await fetch(`${BASE_URL}/product/getproducts${paramString}`);
+  return await fetch(
+    `${import.meta.env.BASE_URL}/product/getproducts${paramString}`
+  );
 }

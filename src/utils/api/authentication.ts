@@ -1,7 +1,5 @@
-import { BASE_URL } from "./baseUrl";
-
 export async function login(email: string, password: string) {
-  return await fetch(`${BASE_URL}/user/login`, {
+  return await fetch(`${import.meta.env.BASE_URL}/user/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,7 +9,7 @@ export async function login(email: string, password: string) {
 }
 
 export async function register(name: string, email: string, password: string) {
-  return await fetch(`${BASE_URL}/user/register`, {
+  return await fetch(`${import.meta.env.BASE_URL}/user/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
