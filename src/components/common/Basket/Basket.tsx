@@ -98,7 +98,7 @@ export default function Basket() {
               className="mt-2 flex w-full items-center justify-center gap-x-2 bg-green p-4"
               onClick={() => {
                 dispatch(setToggleBasket(false));
-                navigate("/checkout");
+                navigate("/checkout/information");
               }}
             >
               <AiFillLock className="text-lg text-white" />

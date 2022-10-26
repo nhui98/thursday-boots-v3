@@ -7,7 +7,7 @@ export default function FormInput({
   placeholder,
 }: InputProps) {
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className={`flex flex-1 flex-col gap-y-2`}>
       <div className="flex flex-wrap justify-between">
         <label htmlFor={name} className="pr-8">
           {label}

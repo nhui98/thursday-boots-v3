@@ -13,17 +13,18 @@ interface LoginFormValues {
   password: string;
 }
 
+const initialValues: LoginFormValues = { email: "", password: "" };
+
+const validationSchema = y.object().shape({
+  email: y.string().email("Invalid email").required("Required"),
+  password: y.string().required("Required"),
+});
+
 export default function LoginForm() {
-  const initialValues: LoginFormValues = { email: "", password: "" };
   const [loginError, setLoginError] = useState(false);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { accessToken } = useAppSelector((state) => state.user);
-
-  const validationSchema = y.object().shape({
-    email: y.string().email("Invalid email").required("Required"),
-    password: y.string().required("Required"),
-  });
 
   useEffect(() => {
     if (accessToken) navigate("/");

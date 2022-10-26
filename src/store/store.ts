@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 import basketReducer from "./features/basket/basketSlice";
+import checkoutReducer from "./features/checkout/checkoutSlice";
 import flyoutReducer from "./features/flyout/flyoutSlice";
 import userReducer from "./features/user/userSlice";
 
@@ -10,6 +11,7 @@ export const store = configureStore({
     basket: basketReducer,
     flyout: flyoutReducer,
     user: userReducer,
+    checkout: checkoutReducer,
   },
 });
 
