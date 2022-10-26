@@ -1,24 +1,10 @@
-import Men1 from "/assets/images/mens/captain/matteblack-1.webp";
-import Men1Alt from "/assets/images/mens/captain/matteblack-2.webp";
-import Men2 from "/assets/images/mens/cavalier/sandstone-1.webp";
-import Men2Alt from "/assets/images/mens/cavalier/sandstone-2.webp";
-import Men3 from "/assets/images/mens/scout/ash-1.webp";
-import Men3Alt from "/assets/images/mens/scout/ash-2.webp";
-import Men4 from "/assets/images/mens/wingtip/chocolate-1.webp";
-import Men4Alt from "/assets/images/mens/wingtip/chocolate-2.webp";
-import Women3 from "/assets/images/womens/captain/matteblack-1.webp";
-import Women3Alt from "/assets/images/womens/captain/matteblack-2.webp";
-import Women2 from "/assets/images/womens/knockout/matteblack-1.webp";
-import Women2Alt from "/assets/images/womens/knockout/matteblack-2.webp";
-import Women1 from "/assets/images/womens/legend/matteblack-1.webp";
-import Women1Alt from "/assets/images/womens/legend/matteblack-2.webp";
-
 export const MENS_DATA: CollectionType[] = [
   {
     id: 1,
     href: "/product-details/mens-boots-captain-matteblack",
-    img: Men1,
-    altImg: Men1Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710723/mens/captain/matteblack-1_onvfdl.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710723/mens/captain/matteblack-2_pljyme.webp",
     description: "Men Captain Black Matte",
     style: "Captain",
     color: "Black Matte",
@@ -27,8 +13,9 @@ export const MENS_DATA: CollectionType[] = [
   {
     id: 2,
     href: "/product-details/mens-boots-cavalier-sandstone",
-    img: Men2,
-    altImg: Men2Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710729/mens/cavalier/sandstone-1_kfmlsf.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710729/mens/cavalier/sandstone-2_z5hg9m.webp",
     description: "Men Cavalier Sandstone",
     style: "Cavalier",
     color: "Sandstone",
@@ -37,8 +24,9 @@ export const MENS_DATA: CollectionType[] = [
   {
     id: 3,
     href: "/product-details/mens-boots-scout-ash",
-    img: Men3,
-    altImg: Men3Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710743/mens/scout/ash-1_dfks04.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710743/mens/scout/ash-2_fxieww.webp",
     description: "Men Scout Ash",
     style: "Scout",
     color: "Ash",
@@ -47,8 +35,9 @@ export const MENS_DATA: CollectionType[] = [
   {
     id: 4,
     href: "/product-details/mens-boots-wingtip-chocolate",
-    img: Men4,
-    altImg: Men4Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710747/mens/wingtip/chocolate-1_vvllfm.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710747/mens/wingtip/chocolate-2_lkomdn.webp",
     description: "Men Wingtip Chocolate",
     style: "Wingtip",
     color: "Chocolate",
@@ -60,8 +49,9 @@ export const WOMENS_DATA: CollectionType[] = [
   {
     id: 1,
     href: "/product-details/womens-boots-legend-matteblack",
-    img: Women1,
-    altImg: Women1Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710756/womens/legend/matteblack-1_e1j1v9.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710757/womens/legend/matteblack-2_lsgew0.webp",
     description: "Women Legend Black Matte",
     style: "Legend",
     color: "Black Matte",
@@ -70,8 +60,9 @@ export const WOMENS_DATA: CollectionType[] = [
   {
     id: 2,
     href: "/product-details/womens-boots-knockout-matteblack",
-    img: Women2,
-    altImg: Women2Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710754/womens/knockout/matteblack-1_damtwg.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710754/womens/knockout/matteblack-2_pykbd8.webp",
     description: "Women Knockout Black Matte",
     style: "Knockout",
     color: "Black Matte",
@@ -80,8 +71,9 @@ export const WOMENS_DATA: CollectionType[] = [
   {
     id: 3,
     href: "/product-details/womens-boots-captain-matteblack",
-    img: Women3,
-    altImg: Women3Alt,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710750/womens/captain/matteblack-1_chqccg.webp",
+    altImg:
+      "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666710750/womens/captain/matteblack-2_mbgvbz.webp",
     description: "Women Captain Black Matte",
     style: "Captain",
     color: "Black Matte",

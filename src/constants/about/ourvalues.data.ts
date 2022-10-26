@@ -1,7 +1,3 @@
-import OurValues1 from "./images/OurValues-1.webp";
-import OurValues2 from "./images/OurValues-2.webp";
-import OurValues3 from "./images/OurValues-3.webp";
-
 export const OUR_VALUES_DATA = {
   title: "It's About More Than Footwear",
   description:
@@ -9,7 +5,7 @@ export const OUR_VALUES_DATA = {
   features: [
     {
       id: 0,
-      img: OurValues1,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781337/thursday/about/OurValues-1_bs9yfh.webp",
       alt: "ethical sourcing",
       title: "Ethical Sourcing",
       description:
@@ -17,7 +13,7 @@ export const OUR_VALUES_DATA = {
     },
     {
       id: 1,
-      img: OurValues2,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781337/thursday/about/OurValues-2_hcgll2.webp",
       alt: "manufacturing",
       title: "Responsible Manufacturing",
       description:
@@ -25,7 +21,7 @@ export const OUR_VALUES_DATA = {
     },
     {
       id: 2,
-      img: OurValues3,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781338/thursday/about/OurValues-3_xiit8c.webp",
       alt: "team",
       title: "Our (Growing) Team",
       description:

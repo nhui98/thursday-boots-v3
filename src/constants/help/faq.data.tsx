@@ -1,9 +1,6 @@
 import { BannerItem, ILink } from "@constants/about/about.data";
 import { Link } from "react-router-dom";
 
-import BannerImg from "./images/BannerImg.webp";
-import BannerImgSm from "./images/BannerImgSm.webp";
-
 export interface IFAQ {
   id: number;
   tagId?: string;
@@ -19,8 +16,8 @@ export interface IQuestion {
 
 export const BANNER_DATA: BannerItem = {
   id: 0,
-  img: BannerImg,
-  img2: BannerImgSm,
+  img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781729/thursday/help/BannerImg_ourfji.webp",
+  img2: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781729/thursday/help/BannerImgSm_qyv3aw.webp",
   alt: "faq",
   title: "Frequently Asked Questions",
 };

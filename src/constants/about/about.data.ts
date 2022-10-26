@@ -1,10 +1,3 @@
-import Banner1 from "./images/Banner1.webp";
-import Banner1sm from "./images/Banner1-sm.webp";
-import Banner2 from "./images/Banner2.webp";
-import Banner2sm from "./images/Banner2-sm.webp";
-import Banner3 from "./images/Banner3.webp";
-import Banner3sm from "./images/Banner3-sm.webp";
-
 export interface BannerItem {
   id: number;
   img: string;
@@ -16,22 +9,22 @@ export interface BannerItem {
 export const BANNER_DATA: BannerItem[] = [
   {
     id: 0,
-    img: Banner1,
-    img2: Banner1sm,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781334/thursday/about/Banner1_ah7b31.webp",
+    img2: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781334/thursday/about/Banner1-sm_z2uejg.webp",
     alt: "our story",
     title: "Our Philosophy Is Simple. You Deserve It All.",
   },
   {
     id: 1,
-    img: Banner2,
-    img2: Banner2sm,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781334/thursday/about/Banner2_c6zond.webp",
+    img2: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781334/thursday/about/Banner2-sm_tqtfca.webp",
     alt: "our product",
     title: "Finding The Perfect Fit.",
   },
   {
     id: 2,
-    img: Banner3,
-    img2: Banner3sm,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781335/thursday/about/Banner3_izf8nl.webp",
+    img2: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781335/thursday/about/Banner3-sm_txgkuc.webp",
     alt: "our values",
     title: "Products Made The Right Way. Always.",
   },

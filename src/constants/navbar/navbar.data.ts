@@ -1,14 +1,3 @@
-import MenPromo1 from "./images/men-promo-1.webp";
-import MenPromo2 from "./images/men-promo-2.webp";
-import MenPromo3 from "./images/men-promo-3.webp";
-import MenPromo4 from "./images/men-promo-4.webp";
-import MenPromo5 from "./images/men-promo-5.webp";
-import WomenPromo1 from "./images/women-promo-1.webp";
-import WomenPromo2 from "./images/women-promo-2.webp";
-import WomenPromo3 from "./images/women-promo-3.webp";
-import WomenPromo4 from "./images/women-promo-4.webp";
-import WomenPromo5 from "./images/women-promo-5.webp";
-
 export interface PromotionItem {
   id: number;
   img: string;
@@ -141,31 +130,31 @@ export const MENU_LINKS_WOMEN: MenuData[] = [
 export const MENS_PROMOTION_DATA: PromotionItem[] = [
   {
     id: 1,
-    img: MenPromo1,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781779/thursday/navbar/men-promo-1_rbs8oo.webp",
     title: "Rugged & Resilient",
     description: "Thoughtfully handcrafted to go the extra mile.",
   },
   {
     id: 2,
-    img: MenPromo2,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781779/thursday/navbar/men-promo-2_iuss8q.webp",
     title: "Year-round Essentials",
     description: "Meet the premier low top, your new go-to leather sneaker.",
   },
   {
     id: 3,
-    img: MenPromo3,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781780/thursday/navbar/men-promo-3_v8plyv.webp",
     title: "Dress To Impress",
     description: "The saint in hickory hand-finished full-grain leather.",
   },
   {
     id: 4,
-    img: MenPromo4,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781780/thursday/navbar/men-promo-4_u1365o.webp",
     title: "Leather Belts",
     description: "The perfect finishing touch.",
   },
   {
     id: 5,
-    img: MenPromo5,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781780/thursday/navbar/men-promo-5_aqyeyb.webp",
     title: "So Fresh & So Clean",
     description: "Premium shoe care for your favourite pair of boots.",
   },
@@ -174,31 +163,31 @@ export const MENS_PROMOTION_DATA: PromotionItem[] = [
 export const WOMENS_PROMOTION_DATA: PromotionItem[] = [
   {
     id: 1,
-    img: WomenPromo1,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781780/thursday/navbar/women-promo-1_gbqbux.webp",
     title: "Be Legendary",
     description: "Thoughtfully handcrafted to go the extra mile.",
   },
   {
     id: 2,
-    img: WomenPromo2,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781780/thursday/navbar/women-promo-2_aszca9.webp",
     title: "Saddle Up With The Rodeo",
     description: "Our latest western boot, now available in 4 colors.",
   },
   {
     id: 3,
-    img: WomenPromo3,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781781/thursday/navbar/women-promo-3_azlo77.webp",
     title: "The Premier Low Top",
     description: "Now available in 6 new colors.",
   },
   {
     id: 4,
-    img: WomenPromo4,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781781/thursday/navbar/women-promo-4_ddluim.webp",
     title: "Leather Belts",
     description: "The perfect finishing touch to any outfit.",
   },
   {
     id: 5,
-    img: WomenPromo5,
+    img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781781/thursday/navbar/women-promo-5_n59maz.webp",
     title: "So Fresh & So Clean",
     description: "Premium shoe care for your favourite pair of boots.",
   },

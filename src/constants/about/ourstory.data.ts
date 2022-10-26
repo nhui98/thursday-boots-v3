@@ -1,9 +1,3 @@
-import OurStory1 from "./images/OurStory-1.avif";
-import OurStory2 from "./images/OurStory-2.avif";
-import OurStory3 from "./images/OurStory-3.avif";
-import OurStory4 from "./images/OurStory-4.avif";
-import OurStory5 from "./images/OurStory-5.avif";
-
 export const OUR_STORY_DATA = {
   title: "Comfort, Durability, Versatility & Honest Pricing.",
   description:
@@ -11,7 +5,7 @@ export const OUR_STORY_DATA = {
   features: [
     {
       id: 0,
-      img: OurStory1,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781336/thursday/about/OurStory-1_fcydfs.avif",
       alt: "mens-captain-brown",
       title: "Commitment To Quality",
       description:
@@ -19,7 +13,7 @@ export const OUR_STORY_DATA = {
     },
     {
       id: 1,
-      img: OurStory2,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781336/thursday/about/OurStory-2_dhoauw.avif",
       alt: "partners",
       title: "World-Class Partners",
       description:
@@ -27,7 +21,7 @@ export const OUR_STORY_DATA = {
     },
     {
       id: 2,
-      img: OurStory3,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781337/thursday/about/OurStory-3_xyrpnc.avif",
       alt: "mens-chelsea-suede",
       title: "A Better Experience",
       description:
@@ -35,7 +29,7 @@ export const OUR_STORY_DATA = {
     },
     {
       id: 3,
-      img: OurStory4,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781337/thursday/about/OurStory-4_nbxlbf.avif",
       alt: "womens-boot",
       title: "For Wherever The Day Takes You",
       description:
@@ -43,7 +37,7 @@ export const OUR_STORY_DATA = {
     },
     {
       id: 4,
-      img: OurStory5,
+      img: "https://res.cloudinary.com/dxjw6bbeg/image/upload/v1666781337/thursday/about/OurStory-5_e5v6zz.avif",
       alt: "team",
       title: "8 Years Later",
       description:
